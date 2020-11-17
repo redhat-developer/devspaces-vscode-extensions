@@ -1,0 +1,38 @@
+#
+# Copyright (c) 2020 Red Hat, Inc.
+# This program and the accompanying materials are made
+# available under the terms of the Eclipse Public License 2.0
+# which is available at https://www.eclipse.org/legal/epl-2.0/
+#
+# SPDX-License-Identifier: EPL-2.0
+#
+
+name: Extension Build and Publish
+on:
+  push:
+    paths:
+      - '**/extension.json'
+    branches:
+      - main
+
+jobs:
+  build-push:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Clone source code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Build and publish changed sidecar definitions
+      run: |
+        ./.ci/extension_build_publish.sh build-publish HEAD^1 HEAD
+
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: $(find . -regex ".*\.\(vsix\|tar.gz\)")
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
