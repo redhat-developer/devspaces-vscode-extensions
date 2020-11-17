@@ -43,7 +43,9 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
-        files: ${{ steps.release-files.outputs.files_to_release }}
+        files: |
+          ./*.vsix
+          ./*.tar.gz
         tag_name: ${{ steps.tag_version.outputs.new_tag }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
