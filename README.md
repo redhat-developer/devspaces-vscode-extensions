@@ -18,7 +18,7 @@ Every extension folder **must** have an `extension.json` file at its root. The s
 }
 ```
 
-Optionally, a `Dockerfile` that builds the extension can be provided inside the extension's folder. Note, this is only needed if the extension requires "special" dependencies to build. If no `Dockerfile` is found in the extensions's folder, then the "generic" `Dockerfile` (found at the root of this repository) will be used. In this case, the only thing needed is the folder matching the extension's name, and the `extension,json` file as outlined above.
+Optionally, a `Dockerfile` that builds the extension can be provided inside the extension's folder. Note, this is only needed if the extension requires "special" dependencies to build. If no `Dockerfile` is found in the extensions's folder, then the "generic" `Dockerfile` (found at the root of this repository) will be used. In this case, the only thing needed is the folder matching the extension's name, and the `extension.json` file as outlined above.
 
 ## Dockerfile Structure
 Should you choose to contribute a `Dockerfile`, the following things are required
@@ -26,5 +26,5 @@ Should you choose to contribute a `Dockerfile`, the following things are require
     * `extension_repository`
     * `extension_revision`
     * `extension_name`
-* The `vsix` file resulting from the build (inside the container) must be located at the root of the container, named `/name-revision.vsix`
-* A tarball of the extension's source code (prior to build) must be located at the root of the container, named `/name-revision-sources.tar.gz`
+* The `vsix` file resulting from the build (inside the container) must be located at the root of the container, named `/name-revision.vsix` (where name and revision are the values of the build arg specified above)
+* A tarball of the extension's source code (prior to build) must be located at the root of the container, named `/name-revision-sources.tar.gz` (again, where name and revision are the values of the build arg specified above)
