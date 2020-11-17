@@ -35,11 +35,6 @@ jobs:
       run: |
         ./.ci/extension_build_publish.sh build-publish HEAD^1 HEAD
 
-    - name: List release files
-      id: release-files
-      run: |
-        echo ::set-output name=files_to_release::"$(cat release_files)"
-
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
