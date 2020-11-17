@@ -38,7 +38,7 @@ jobs:
     - name: List release files
       id: release-files
       run: |
-        echo ::set-output name=files_to_release::"$(find . -regex ".*\.\(vsix\|tar.gz\)")"
+        echo ::set-output name=files_to_release::"$(cat release_files)"
 
     - name: Release
       uses: softprops/action-gh-release@v1
