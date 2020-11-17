@@ -38,6 +38,8 @@ do
                 BUILDER_CONTAINER_ID=$(cat $EXTENSION_NAME-builder-id)
                 docker cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME-$EXTENSION_REVISION.vsix ./
                 docker cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME-$EXTENSION_REVISION-sources.tar.gz ./
+                echo "$EXTENSION_NAME-$EXTENSION_REVISION-sources.tar.gz" >> release_files
+                echo "$EXTENSION_NAME-$EXTENSION_REVISION.vsix" >> release_files
                 docker stop $BUILDER_CONTAINER_ID
                 rm ./$EXTENSION_NAME-builder-id
             fi
