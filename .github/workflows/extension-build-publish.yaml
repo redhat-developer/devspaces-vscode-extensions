@@ -29,10 +29,15 @@ jobs:
       run: |
         ./.ci/extension_build_publish.sh build-publish HEAD^1 HEAD
 
+    - name: List release files
+      id: release-files
+      run: |
+        echo ::set-output name=files_to_release::"$(find . -regex ".*\.\(vsix\|tar.gz\)")"
+
     - name: Release
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        files: $(find . -regex ".*\.\(vsix\|tar.gz\)")
+        files: ${{ steps.release-files.outputs.files_to_release }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
