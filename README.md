@@ -5,7 +5,7 @@ Every extension in this repository builds inside a `ubi8` based Dockerfile. The 
 
 # Contributing
 ## Repository Structure
-Every folder in this repository belongs to a VS Code extension. For example, the `Dockerfile` that builds the `vscode-python` extension would live in the `/vscode-python` folder.
+Every folder in this repository belongs to a VS Code extension. For example, the `Dockerfile` that builds the `vscode-python` extension would live in the `/vscode-python` folder. Please note that the name of the folder **must** match the repository name for the VS Code extension. For example, the folder name for the extension hosted at `https://github.com/microsoft/vscode-eslint` must be named `vscode-eslint`.
 
 Every extension folder **must** have an `extension.json` file at its root. The schema of this JSON file is as follows:
 
