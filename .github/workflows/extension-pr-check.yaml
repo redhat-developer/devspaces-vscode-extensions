@@ -24,7 +24,7 @@ jobs:
         fetch-depth: 0
         ref: ${{ github.event.pull_request.head.sha }}
 
-    - name: Build and publish changed sidecar definitions
+    - name: Build extension
       run: |
         ./.ci/extension_build_publish.sh build origin/${{ github.base_ref }} ${{ github.event.pull_request.head.sha }}
 

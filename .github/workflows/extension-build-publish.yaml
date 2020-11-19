@@ -38,7 +38,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         custom_tag: ${{ steps.release-info.outputs.release-tag }}
 
-    - name: Build and publish changed sidecar definitions
+    - name: Build extension, copy vsix and source tarball
       run: |
         ./.ci/extension_build_publish.sh build-publish HEAD^1 HEAD
 
