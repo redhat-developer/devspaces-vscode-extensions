@@ -25,7 +25,7 @@ do
             EXTENSION_REVISION=$(cat "$file" | jq -r .revision)
             echo "Building $EXTENSION_NAME, version $EXTENSION_REPOSITORY"
             if test -f "$EXTENSION_NAME/Dockerfile"; then
-                docker build --no-cache=true --build-arg extension_name="$EXTENSION_NAME" --build-arg extension_repository="$EXTENSION_REPOSITORY" \
+                docker build --network=host --no-cache=true --build-arg extension_name="$EXTENSION_NAME" --build-arg extension_repository="$EXTENSION_REPOSITORY" \
                     --build-arg extension_revision="$EXTENSION_REVISION" -t "$EXTENSION_NAME"-builder "$EXTENSION_NAME"/
             else
                 docker build --no-cache=true --build-arg extension_name="$EXTENSION_NAME" --build-arg extension_repository="$EXTENSION_REPOSITORY" \
