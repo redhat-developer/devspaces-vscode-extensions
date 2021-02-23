@@ -7,7 +7,8 @@
 # SPDX-License-Identifier: EPL-2.0
 #
 
-FROM registry.access.redhat.com/ubi8/nodejs-12
+# https://catalog.redhat.com/software/containers/ubi8/nodejs-12/5d3fff015a13461f5fb8635a?tag=1-70
+FROM registry.access.redhat.com/ubi8/nodejs-12:1-70
 
 ARG extension_repository
 ARG extension_revision
