@@ -21,5 +21,5 @@ RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
     rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
-    npm install -g vsce gulp-cli && npm install --unsafe-perm=true --allow-root && \
+    npm install -g vsce@1.85.1 gulp-cli@2.3.0 && npm install --unsafe-perm=true --allow-root && \
     vsce package --out /${extension_name}-${extension_revision}.vsix
