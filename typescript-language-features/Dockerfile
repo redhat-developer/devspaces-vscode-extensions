@@ -27,5 +27,6 @@ RUN yum -y -q update && \
 FROM builder
 
 COPY ./build/build-vsx.sh /
+RUN chmod +x /build-vsx.sh
 
 RUN /build-vsx.sh "${extension_name}" "${extension_repository}" "${extension_revision}"
