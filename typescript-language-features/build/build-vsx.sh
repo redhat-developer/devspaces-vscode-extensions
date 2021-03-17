@@ -8,24 +8,25 @@
 # SPDX-License-Identifier: EPL-2.0
 #
 
-echo $1 $2 $3 # name, repo, revision
-mkdir "$1-src"
-cd "$1-src"
-echo cloning $2 into $1 && git clone $2 $1
-cd $1
+NAME="$1"
+REPO="$2"
+REVISION="$3"
 
-sed -i 's/forcePackaging = false/forcePackaging = true/' src/package-vsix.js 
+echo building $NAME V $REVISION from repo $REPO
+mkdir "$NAME-src"
+cd "$NAME-src"
+echo cloning $REPO into $NAME && git clone $REPO $NAME
+cd $NAME
 
 git submodule init
 git submodule update
 cd vscode
-git checkout $3
+git checkout $REVISION
 cd ..
 yarn build:extensions
 yarn bundle:extensions
 yarn install --ignore-scripts
 yarn package-vsix:latest --force
-ls
-echo whats in dist
-ls dist
-cp dist/$1-$3.vsix /
+
+cp dist/$NAME-$REVISION.vsix /
+cd /$NAME-src/$NAME/vscode/extensions/$NAME && tar -czvf /$NAME-$REVISION-sources.tar.gz ./
