@@ -9,9 +9,9 @@
 
 FROM registry.access.redhat.com/ubi8/nodejs-10 as builder
 
-ARG extension_repository=https://github.com/eclipse-theia/vscode-builtin-extensions
-ARG extension_revision=1.49.3
-ARG extension_name=typescript-language-features
+ARG extension_repository
+ARG extension_revision
+ARG extension_name
 
 USER root
 WORKDIR /
@@ -25,6 +25,10 @@ RUN yum -y -q update && \
     ln /usr/bin/python2 /usr/bin/python
 
 FROM builder
+
+ARG extension_repository
+ARG extension_revision
+ARG extension_name
 
 COPY ./build/build-vsx.sh /
 RUN chmod +x /build-vsx.sh
