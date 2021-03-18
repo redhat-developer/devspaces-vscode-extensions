@@ -21,7 +21,7 @@ COPY ./build/content_set*.repo /etc/yum.repos.d/
 RUN yum -y -q update && \
     yum groupinstall -y "Development Tools" && \
     yum install -y python27 libX11-devel libxkbfile-devel libsecret-devel && \
-    npm install -g yarn && \
+    npm install -g yarn@1.22.10 && \
     ln /usr/bin/python2 /usr/bin/python
 
 FROM builder
