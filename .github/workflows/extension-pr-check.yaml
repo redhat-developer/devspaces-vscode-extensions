@@ -12,6 +12,7 @@ on:
   pull_request:
     paths:
       - '**/extension.json'
+      - '**/Dockerfile'
 
 jobs:
   build-push:

@@ -12,6 +12,7 @@ on:
   push:
     paths:
       - '**/extension.json'
+      - '**/Dockerfile'
     branches:
       - main
 
