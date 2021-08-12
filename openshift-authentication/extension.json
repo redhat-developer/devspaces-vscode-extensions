@@ -1,4 +1,4 @@
 {
-  "repository": "https://github.com/vinokurig/test-extension",
-  "revision": "che-theia"
+  "repository": "https://github.com/che-incubator/che-theia-openshift-auth",
+  "revision": "0.0.3"
 }
