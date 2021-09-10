@@ -21,6 +21,9 @@ RUN dnf -y install git python36 python3-six python3-pip platform-python-pip \
     curl wget bzip2 gdb make cmake gcc gcc-c++
 RUN /usr/bin/python3 -m pip install --upgrade pip
 
+# activating CI/production mode to reduce size of webpack output
+ENV TRAVIS=true
+
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
