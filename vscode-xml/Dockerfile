@@ -8,7 +8,8 @@
 #
 
 # https://catalog.redhat.com/software/containers/ubi8/nodejs-12/5d3fff015a13461f5fb8635a?tag=1-70
-FROM registry.access.redhat.com/ubi8/nodejs-12:1-70
+# FROM registry.access.redhat.com/ubi8/nodejs-12:1-70
+FROM registry.access.redhat.com/ubi8/nodejs-14:1-50
 
 ARG extension_repository
 ARG extension_revision
@@ -25,7 +26,9 @@ RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
     rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
+
     npm install -g vsce gulp-cli && npm install --unsafe-perm=true --allow-root && \
+
     export XML_SERVER_VERSION="$(cat package.json | jq -r .xmlServer.version)" && \
     mkdir ./server && cd ./server && export XML_SERVER_FILE=org.eclipse.lemminx-${XML_SERVER_VERSION}-uber.jar && \
     curl ${XML_SERVER_URL}/${XML_SERVER_VERSION}/${XML_SERVER_FILE} -o ${XML_SERVER_FILE} && \
