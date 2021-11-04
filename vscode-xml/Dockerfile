@@ -22,15 +22,22 @@ WORKDIR /
 
 RUN dnf install -y jq
 
-RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
-    git clone ${extension_repository} ${extension_name} && \
-    cd ./${extension_name} && git checkout ${extension_revision} && \
-    rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
+RUN npm install -g npm@latest
 
-    npm install -g vsce gulp-cli && npm install --unsafe-perm=true --allow-root && \
-
-    export XML_SERVER_VERSION="$(cat package.json | jq -r .xmlServer.version)" && \
-    mkdir ./server && cd ./server && export XML_SERVER_FILE=org.eclipse.lemminx-${XML_SERVER_VERSION}-uber.jar && \
-    curl ${XML_SERVER_URL}/${XML_SERVER_VERSION}/${XML_SERVER_FILE} -o ${XML_SERVER_FILE} && \
-    echo "$(sha1sum ${XML_SERVER_FILE})" && \
-    cd .. && vsce package --out /${extension_name}-${extension_revision}.vsix
+RUN mkdir ./${extension_name}-src \
+    && cd ./${extension_name}-src \
+    && git clone ${extension_repository} ${extension_name} \
+    && cd ./${extension_name} \
+    && git checkout ${extension_revision} \
+    && rm -rf ./.git \
+    && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ \
+    && npm install -g vsce@1.85.1 gulp-cli@2.3.0 \
+    && npm install --unsafe-perm=true --allow-root \
+    && export XML_SERVER_VERSION="$(cat package.json | jq -r .xmlServer.version)" \
+    && mkdir ./server \
+    && cd ./server \
+    && export XML_SERVER_FILE=org.eclipse.lemminx-${XML_SERVER_VERSION}-uber.jar \
+    && curl ${XML_SERVER_URL}/${XML_SERVER_VERSION}/${XML_SERVER_FILE} -o ${XML_SERVER_FILE} \
+    && echo "$(sha1sum ${XML_SERVER_FILE})" \
+    && cd .. \
+    && vsce package --out /${extension_name}-${extension_revision}.vsix
