@@ -47,5 +47,5 @@ RUN mkdir ./${extension_name}-src \
     && cd .. \
     && vsce package --out /${extension_name}-${extension_revision}.vsix \
     && echo "----------------------------------------------" \
-    && ls -la \
+    && ls -la / \
     && echo "Done."
