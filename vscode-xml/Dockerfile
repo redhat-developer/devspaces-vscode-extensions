@@ -8,8 +8,8 @@
 #
 
 # https://catalog.redhat.com/software/containers/ubi8/nodejs-12/5d3fff015a13461f5fb8635a?tag=1-70
-FROM registry.access.redhat.com/ubi8/nodejs-12:1-70
-# FROM registry.access.redhat.com/ubi8/nodejs-14:1-50
+# FROM registry.access.redhat.com/ubi8/nodejs-12:1-70
+FROM registry.access.redhat.com/ubi8/nodejs-14:1-50
 
 ARG extension_repository
 ARG extension_revision
@@ -22,7 +22,7 @@ WORKDIR /
 
 RUN dnf install -y jq
 
-# RUN npm install -g npm@latest
+RUN npm install -g npm@latest
 
 RUN mkdir ./${extension_name}-src \
     && cd ./${extension_name}-src \
