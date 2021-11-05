@@ -8,7 +8,7 @@
 #
 
 # https://catalog.redhat.com/software/containers/ubi8/nodejs-12/5d3fff015a13461f5fb8635a?tag=1-70
-FROM registry.access.redhat.com/ubi8/nodejs-14:1-50
+FROM registry.access.redhat.com/ubi8/nodejs-12:1-70
 
 ARG extension_repository
 ARG extension_revision
@@ -21,8 +21,6 @@ WORKDIR /
 
 RUN dnf install -y jq
 
-RUN npm install -g npm@latest
-
 RUN mkdir ./${extension_name}-src \
     && cd ./${extension_name}-src \
     && git clone ${extension_repository} ${extension_name} \
@@ -30,9 +28,15 @@ RUN mkdir ./${extension_name}-src \
     && git checkout ${extension_revision} \
     && rm -rf ./.git \
     && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ \
-    && npm install -g vsce@1.85.1 gulp-cli@2.3.0 \
-    && rm package-lock.json \
+    && echo ">> REPLACE in package-lock.json" \
+    && REPLACE_FROM="https://repository.engineering.redhat.com/nexus/repository/registry.npmjs.org" \
+    && REPLACE_TO="https://registry.npmjs.org" \
+    && sed -i "s|${REPLACE_FROM}|${REPLACE_TO}|" package-lock.json \
+    && echo ">> instal vsce, gulp" \
+    && npm install -g vsce@1.83.0 gulp-cli@2.3.0 \
+    && echo ">> install node dependencies" \
     && npm install --unsafe-perm=true --allow-root \
+    && echo ">> download XML server" \
     && export XML_SERVER_VERSION="$(cat package.json | jq -r .xmlServer.version)" \
     && mkdir ./server \
     && cd ./server \
@@ -40,4 +44,5 @@ RUN mkdir ./${extension_name}-src \
     && curl ${XML_SERVER_URL}/${XML_SERVER_VERSION}/${XML_SERVER_FILE} -o ${XML_SERVER_FILE} \
     && echo "$(sha1sum ${XML_SERVER_FILE})" \
     && cd .. \
+    && echo ">> build the extension" \
     && vsce package --out /${extension_name}-${extension_revision}.vsix

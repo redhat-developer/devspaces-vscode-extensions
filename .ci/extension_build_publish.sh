@@ -8,7 +8,7 @@
 # SPDX-License-Identifier: EPL-2.0
 #
 
-set -e
+set -ex
 
 BUILD_PUBLISH="$1"
 BUILD_ARGS="--push"
