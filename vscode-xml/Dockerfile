@@ -33,6 +33,8 @@ RUN mkdir ./${extension_name}-src \
     && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ \
     && echo ">> install vsce, gulp" \
     && npm install -g vsce@1.85.1 gulp-cli@2.3.0 \
+    && echo ">> remove package-lock.json" \
+    && rm package-lock.json \
     && echo ">> install node dependencies..." \
     && npm install --unsafe-perm=true --allow-root \
     && export XML_SERVER_VERSION="$(cat package.json | jq -r .xmlServer.version)" \
