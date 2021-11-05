@@ -34,9 +34,13 @@ RUN mkdir ./${extension_name}-src \
     && git checkout ${extension_revision} \
     && rm -rf ./.git \
     && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ \
-    && npm install -g vsce@1.83.0 gulp-cli@2.3.0 \
+    && echo ">>> remove package-lock.json" \
     && rm package-lock.json \
+    && echo ">>> instal vsce, gulp" \
+    && npm install -g vsce@1.83.0 gulp-cli@2.3.0 \
+    && echo ">>> install node dependencies" \
     && npm install --unsafe-perm=true --allow-root \
+    && echo ">>> download XML server" \
     && export XML_SERVER_VERSION="$(cat package.json | jq -r .xmlServer.version)" \
     && mkdir ./server \
     && cd ./server \
@@ -44,4 +48,5 @@ RUN mkdir ./${extension_name}-src \
     && curl ${XML_SERVER_URL}/${XML_SERVER_VERSION}/${XML_SERVER_FILE} -o ${XML_SERVER_FILE} \
     && echo "$(sha1sum ${XML_SERVER_FILE})" \
     && cd .. \
+    && echo ">>> build the extension" \
     && vsce package --out /${extension_name}-${extension_revision}.vsix
