@@ -27,5 +27,12 @@ jobs:
 
     - name: Build extension
       run: |
-        ./.ci/extension_build_publish.sh build origin/${{ github.base_ref }} ${{ github.event.pull_request.head.sha }}
+        ./.ci/extension_build_publish.sh build-publish origin/${{ github.base_ref }} ${{ github.event.pull_request.head.sha }}
 
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        path: |
+          *.vsix
+          *-sources.tar.gz
