@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (c) 2021 Red Hat, Inc.
+# Copyright (c) 2022 Red Hat, Inc.
 # This program and the accompanying materials are made
 # available under the terms of the Eclipse Public License 2.0
 # which is available at https://www.eclipse.org/legal/epl-2.0/
@@ -51,8 +51,9 @@ if [[ ! -x /tmp/uploadAssetsToGHRelease.sh ]]; then
 fi
 
 pushd /tmp >/dev/null
-    git clone --depth 1 https://github.com/$GITHUB_REPO --single-branch sources
-    pushd /tmp/sources >/dev/null
+    rm -fr /tmp/vscode-extensions-sources
+    git clone --depth 1 https://github.com/$GITHUB_REPO --single-branch vscode-extensions-sources
+    pushd /tmp/vscode-extensions-sources >/dev/null
 
     for URL in ${URLList}; do
         curl -sSLO $URL
@@ -67,3 +68,4 @@ pushd /tmp >/dev/null
 
     popd >/dev/null
 popd >/dev/null
+rm -fr /tmp/vscode-extensions-sources
