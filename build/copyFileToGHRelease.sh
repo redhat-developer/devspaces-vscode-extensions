@@ -60,7 +60,7 @@ pushd /tmp >/dev/null
         ASSET_VERSION=${file%.vsix}; ASSET_VERSION=$(echo "$ASSET_VERSION" | sed -r -e "s#([a-z-]+)-([0-9a-f.-]+)#\2#")
         ASSET_NAME=${file%.vsix}; ASSET_NAME=$(echo "$ASSET_NAME" | sed -r -e "s#([a-z-]+)-([0-9a-f.-]+)#\1#")
 
-        bash -x /tmp/uploadAssetsToGHRelease.sh ${PRE_RELEASE} --publish-assets \
+        /tmp/uploadAssetsToGHRelease.sh --publish-assets --release \
             --repo-path . -b "main" \
             -v "${ASSET_VERSION}" --asset-name "${ASSET_NAME}" "${file}"
     done
