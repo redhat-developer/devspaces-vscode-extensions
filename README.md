@@ -1,5 +1,4 @@
-# codeready-workspaces-vscode-extensions
-This repository builds and publishes VS Code extensions used in CodeReady Workspaces.
+This repository builds and publishes VS Code extensions used in both Eclipse Che and in Red Hat OpenShift Dev Spaces (formerly Red Hat CodeReady Workspaces).
 
 Every extension in this repository builds inside a `ubi8` based Dockerfile. The resulting `.vsix` files and sources tarballs are then copied out of the container and published as GitHub release assets. Every PR merged in this repository will trigger a GitHub release, where the extensions built from that PR will be the release assets in the corresponding GitHub release.
 
