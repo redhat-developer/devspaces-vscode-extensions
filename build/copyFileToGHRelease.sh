@@ -25,7 +25,18 @@ First, export your GITHUB_TOKEN:
 '
 }
 
+usage () {
+    echo "
+Usage:
+
+  $0 https://url/1.vsix [https://url/2.vsix ...]
+"
+}
 GITHUB_REPO="redhat-developer/codeready-workspaces-vscode-extensions"
+MIDSTM_BRANCH="main"
+ASSET_VERSION="7.44" # or 3.0
+ASSET_NAME="che" # or devspaces
+PRE_RELEASE=""
 
 while [[ "$#" -gt 0 ]]; do
   case $1 in
@@ -33,7 +44,6 @@ while [[ "$#" -gt 0 ]]; do
     '-b') MIDSTM_BRANCH="$2"; shift 1;;
     '-ght') GITHUB_TOKEN="$2"; export GITHUB_TOKEN="${GITHUB_TOKEN}"; shift 1;;
     '-n'|'--asset-name')       ASSET_NAME="$2"; shift 1;;
-
     '--prerelease')            PRE_RELEASE="$1";; # --prerelease
     '-h'|'--help') usageGHT; exit 0;;
     *) URLList="${URLList} $1";;
@@ -42,30 +52,48 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 if [[ ! "${GITHUB_TOKEN}" ]]; then usageGHT; exit 1; fi
+if [[ -z $URLList ]]; then echo "Error: no URLs specified to publish!"; usage; exit 1; fi
 
-if [[ ! -x /tmp/uploadAssetsToGHRelease.sh ]]; then
-    pushd /tmp/ >/dev/null
-    curl -sSLO "https://raw.githubusercontent.com/redhat-developer/codeready-workspaces/crw-2-rhel-8/product/uploadAssetsToGHRelease.sh" && \
-    chmod +x uploadAssetsToGHRelease.sh
-    popd >/dev/null
-fi
+for URL in ${URLList}; do
+  curl -sSLO $URL
+  fileToPush=${URL##*/}
+  if [[ ! $(hub release | grep ${ASSET_VERSION}-${ASSET_NAME}-assets) ]]; then
+    #no existing release, create it
+    hub release create -t "${MIDSTM_BRANCH}" \
+      -m "${ASSET_VERSION} ${ASSET_NAME} vsix files" -m "vscode extensions for ${ASSET_VERSION}" \
+      ${PRE_RELEASE} "${ASSET_VERSION}-${ASSET_NAME}-assets"
+  fi
 
-pushd /tmp >/dev/null
-    rm -fr /tmp/vscode-extensions-sources
-    git clone --depth 1 https://github.com/$GITHUB_REPO --single-branch vscode-extensions-sources
-    pushd /tmp/vscode-extensions-sources >/dev/null
+  echo "[INFO] Upload new asset $fileToPush (1/3)"
+  try=$(hub release edit -a ${fileToPush} "${ASSET_VERSION}-${ASSET_NAME}-assets" \
+    -m "${ASSET_VERSION} ${ASSET_NAME} vsix files" -m "vscode extensions for ${ASSET_VERSION}" 2>&1 || true)
+  echo "[INFO] $try"
 
-    for URL in ${URLList}; do
-        curl -sSLO $URL
-        file=${URL##*/}
-        ASSET_VERSION=${file%.vsix}; ASSET_VERSION=$(echo "$ASSET_VERSION" | sed -r -e "s#([a-z-]+)-([0-9a-f.-]+)#\2#")
-        ASSET_NAME=${file%.vsix}; ASSET_NAME=$(echo "$ASSET_NAME" | sed -r -e "s#([a-z-]+)-([0-9a-f.-]+)#\1#")
+  # if release doesn't exist, create it
+  if [[ $try == *"nable to find release with tag name"* ]]; then
+    echo "[WARNING] GH release '${ASSET_VERSION} ${ASSET_NAME} vsix files' does not exist: create it (1)"
+    hub release create -t "${MIDSTM_BRANCH}" \
+      -m "${ASSET_VERSION} ${ASSET_NAME} vsix files" -m "vscode extensions for ${ASSET_VERSION}" \
+      ${PRE_RELEASE} "${ASSET_VERSION}-${ASSET_NAME}-assets" || true
+    sleep 10s
+    echo "[INFO] Upload new asset $fileToPush (2/3)"
+    tryAgain=$(hub release edit -a ${fileToPush} "${ASSET_VERSION}-${ASSET_NAME}-assets" \
+    -m "${ASSET_VERSION} ${ASSET_NAME} vsix files" -m "vscode extensions for ${ASSET_VERSION}" 2>&1 || true)
+    echo "[INFO] $tryAgain"
+  fi
+  # if release STILL doesn't exist, create it again (?)
+  if [[ $tryAgain == *"nable to find release with tag name"* ]]; then
+    echo "GH release '${ASSET_VERSION} ${ASSET_NAME} vsix files' does not exist: create it (2)"
+    hub release create -t "${MIDSTM_BRANCH}" \
+      -m "${ASSET_VERSION} ${ASSET_NAME} vsix files" -m "vscode extensions for ${ASSET_VERSION}" \
+      ${PRE_RELEASE} "${ASSET_VERSION}-${ASSET_NAME}-assets" || true
+    sleep 10s
+    echo "[INFO] Upload new asset $fileToPush (3/3)"
+    hub release edit -a ${fileToPush} "${ASSET_VERSION}-${ASSET_NAME}-assets" \
+    -m "${ASSET_VERSION} ${ASSET_NAME} vsix files" -m "vscode extensions for ${ASSET_VERSION}" || \
+    { echo "[ERROR] Failed to push ${fileToPush} to '${ASSET_VERSION}-${ASSET_NAME}-assets' release!"; exit 1; }
+  fi
 
-        /tmp/uploadAssetsToGHRelease.sh --publish-assets --release \
-            --repo-path . -b "main" \
-            -v "${ASSET_VERSION}" --asset-name "${ASSET_NAME}" "${file}"
-    done
-
-    popd >/dev/null
-popd >/dev/null
-rm -fr /tmp/vscode-extensions-sources
+  # cleanup downloaded files
+  rm -f $fileToPush
+done
