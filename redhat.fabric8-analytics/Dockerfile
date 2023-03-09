@@ -17,11 +17,13 @@ ARG extension_name
 USER root
 WORKDIR /
 
-RUN npm install -g npm@latest
+RUN npm install -g npm@6.14.17
 
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
     rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
     npm install -g @vscode/vsce@2.17.0 gulp-cli@2.3.0 && npm install --unsafe-perm=true --allow-root && \
+    #the svg file breaks vsce so we take it out until they update the marketplace image
+    sed -i '/fabric8-analytics.svg/d' ./README.md && \
     vsce package --out /${extension_name}-${extension_revision}.vsix

@@ -7,7 +7,7 @@
 # SPDX-License-Identifier: EPL-2.0
 #
 
-# https://catalog.redhat.com/software/containers/ubi8/nodejs-14/5ed7887dd70cc50e69c2fabb?tag=1-50
+# https://catalog.redhat.com/software/containers/ubi8/nodejs-12/5d3fff015a13461f5fb8635a?tag=1-70
 FROM registry.access.redhat.com/ubi8/nodejs-18:1-24
 
 ARG extension_repository
@@ -17,11 +17,17 @@ ARG extension_name
 USER root
 WORKDIR /
 
-RUN npm install -g npm@latest
+RUN dnf -y install git python36 python3-six python3-pip platform-python-pip \
+    curl wget bzip2 gdb make cmake gcc gcc-c++
+RUN /usr/bin/python3 -m pip install --upgrade pip
+
+# activating CI/production mode to reduce size of webpack output
+ENV TRAVIS=true
 
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
     rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
-    npm install -g @vscode/vsce@2.17.0 gulp-cli@2.3.0 && npm install --unsafe-perm=true --allow-root && \
+    npm install -g vsce gulp-cli && npm install --unsafe-perm=true --allow-root && \
+    gulp installPythonLibs && gulp prePublishBundle && \
     vsce package --out /${extension_name}-${extension_revision}.vsix

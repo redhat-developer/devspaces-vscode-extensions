@@ -8,7 +8,7 @@
 #
 
 # https://catalog.redhat.com/software/containers/ubi8/nodejs-14/5ed7887dd70cc50e69c2fabb?tag=1-50
-FROM registry.access.redhat.com/ubi8/nodejs-18:1-24
+FROM registry.access.redhat.com/ubi8/nodejs-14:1-101
 
 ARG extension_repository
 ARG extension_revision
@@ -17,9 +17,11 @@ ARG extension_name
 USER root
 WORKDIR /
 
-RUN npm install -g npm@latest
+RUN npm install -g npm@6.14.17
 
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
+    git clone https://github.com/redhat-developer/quarkus-ls && \
+    cd quarkus-ls && git checkout 0.13.0 && cd .. && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
     rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \

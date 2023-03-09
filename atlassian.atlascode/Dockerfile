@@ -23,5 +23,5 @@ RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
     rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
-    npm install -g @vscode/vsce@2.17.0 gulp-cli@2.3.0 && npm install --unsafe-perm=true --allow-root && \
-    vsce package --out /${extension_name}-${extension_revision}.vsix
+    npm install -g @vscode/vsce@2.17.0 gulp-cli@2.3.0 yarn@1.22.19 && npm install --unsafe-perm=true --allow-root && \
+    vsce package --out /${extension_name}-${extension_revision}.vsix --baseContentUrl https://bitbucket.org/atlassianlabs/atlascode --allow-star-activation
