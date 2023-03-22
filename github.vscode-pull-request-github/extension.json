@@ -1,4 +1,5 @@
 {
   "repository": "https://github.com/microsoft/vscode-pull-request-github",
-  "revision": "v0.58.1"
+  "revision": "v0.58.1",
+  "packageManager": "yarn@1.22.10"
 }

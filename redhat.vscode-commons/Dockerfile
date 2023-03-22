@@ -7,23 +7,28 @@
 # SPDX-License-Identifier: EPL-2.0
 #
 
-# https://catalog.redhat.com/software/containers/ubi8/nodejs-14/5ed7887dd70cc50e69c2fabb?tag=1-50
-FROM registry.access.redhat.com/ubi8/nodejs-18:1-24
+ARG extension_image
+
+FROM registry.access.redhat.com/ubi8/${extension_image}
 
 ARG extension_repository
 ARG extension_revision
 ARG extension_name
+ARG extension_manager
+ARG extension_vsce
 
 USER root
 WORKDIR /
 
-RUN npm install -g npm@latest
+RUN npm install -g ${extension_manager}
 
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
     rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
-    npm install -g @vscode/vsce@2.17.0 gulp-cli@2.3.0 && npm install --unsafe-perm=true --allow-root && \
+    npm install -g @vscode/vsce@${extension_vsce} gulp-cli@2.3.0 && \
+    if [[ -f yarn.lock ]]; then yarn install; \
+    else npm install --unsafe-perm=true --allow-root; fi && \
     #the svg file breaks vsce so we take it out until they update the marketplace image
     sed -i '/vscode-commons.svg/d' ./README.md && \
     vsce package --out /${extension_name}-${extension_revision}.vsix

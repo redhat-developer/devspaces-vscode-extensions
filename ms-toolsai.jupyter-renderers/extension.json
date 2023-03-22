@@ -1,4 +1,6 @@
 {
   "repository": "https://github.com/microsoft/vscode-notebook-renderers",
-  "revision": "bb2da99df33751e46fd37d2bdf08a07146336e3a"
+  "revision": "bb2da99df33751e46fd37d2bdf08a07146336e3a",
+  "ubi8Image": "nodejs-16:1-90",
+  "packageManager": "npm@8.15.1"
 }

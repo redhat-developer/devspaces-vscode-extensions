@@ -1,4 +1,6 @@
 {
   "repository": "https://github.com/redhat-developer/vscode-quarkus",
-  "revision": "v1.12.0"
+  "revision": "v1.12.0",
+  "ubi8Image": "nodejs-14:1-101",
+  "packageManager" :"npm@6.14.17"
 }

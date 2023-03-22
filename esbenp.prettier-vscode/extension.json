@@ -1,4 +1,5 @@
 {
   "repository": "https://github.com/prettier/prettier-vscode",
-  "revision": "v9.10.4"
+  "revision": "v9.10.4",
+  "packageManager": "yarn@1.22.10"
 }

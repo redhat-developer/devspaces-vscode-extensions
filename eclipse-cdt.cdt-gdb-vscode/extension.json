@@ -1,4 +1,5 @@
 {
   "repository": "https://github.com/eclipse-cdt-cloud/cdt-gdb-vscode",
-  "revision": "a7b9635acf049bb1ed5d9557ca1a765ca750e548"
+  "revision": "v0.0.95",
+  "packageManager": "yarn@1.22.10"
 }
