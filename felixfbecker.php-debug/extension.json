@@ -1,5 +1,5 @@
 {
   "repository": "https://github.com/xdebug/vscode-php-debug",
-  "revision": "v1.31.1",
+  "revision": "66cd9369296a73d33f727af1d100c4f46ed24a69",
   "ubi8Image": "nodejs-16:1-90"
 }
