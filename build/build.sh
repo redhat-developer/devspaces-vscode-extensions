@@ -12,33 +12,34 @@ set -ex
 
 EXTENSION_NAME="$1"
 
-
-if test -f "$EXTENSION_NAME/extension.json"; then
-    EXTENSION_JSON="$EXTENSION_NAME/extension.json"
-else
-    echo "Extension $EXTENSION_NAME does not have an extension.json"
+if [[ $(cat "plugin-config.json" | jq -r '.Plugins["'$EXTENSION_NAME'"]') -eq "null" ]]; then
+    echo "Extension $EXTENSION_NAME is not in plugin-config.json"
     exit
 fi
 
-EXTENSION_REPOSITORY=$(cat "$EXTENSION_JSON" | jq -r .repository)
-EXTENSION_REVISION=$(cat "$EXTENSION_JSON" | jq -r .revision)
+function parse_json () {
+    echo $(cat "plugin-config.json" | jq -r '.Plugins["'$EXTENSION_NAME'"]["'$1'"]')
+}
+
+EXTENSION_REPOSITORY=$(parse_json repository)
+EXTENSION_REVISION=$(parse_json revision)
 
 #Defaults
 ubi8Image="nodejs-18:1-24"
 packageManager="npm@latest"
 vsceVersion="2.17.0"
 
-EXTENSION_IMAGE=$(cat "$EXTENSION_JSON" | jq -r .ubi8Image)
+EXTENSION_IMAGE=$(parse_json ubi8Image)
 if [[ $EXTENSION_IMAGE -eq "null" ]]; then
     EXTENSION_IMAGE=$ubi8Image
 fi
 
-EXTENSION_MANAGER=$(cat "$EXTENSION_JSON" | jq -r .packageManager)
+EXTENSION_MANAGER=$(parse_json packageManager)
 if [[ $EXTENSION_MANAGER -eq "null" ]]; then
     EXTENSION_MANAGER=$packageManager
 fi
 
-EXTENSION_VSCE=$(cat "$EXTENSION_JSON" | jq -r .vsceVersion)
+EXTENSION_VSCE=$(parse_json vsceVersion)
 if [[ $EXTENSION_VSCE -eq "null" ]]; then
     EXTENSION_VSCE=$vsceVersion
 fi
@@ -72,3 +73,4 @@ docker cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME-$EXTENSION_REVISION-sources.tar
 docker stop $BUILDER_CONTAINER_ID
 rm ./$EXTENSION_NAME-builder-id
 
+#Output to manifest?
