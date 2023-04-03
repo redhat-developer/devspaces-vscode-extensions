@@ -87,7 +87,8 @@
       "repository": "https://github.com/microsoft/vscode-jupyter",
       "revision": "a049d129fb1aea9d4691c7bf3acbc5ed7c8dc3c1",
       "update": "true",
-      "packageManager": "npm@6.14.15"
+      "ubi8Image": "nodejs-16:1-90",
+      "packageManager": "npm@8.15.1"
     },
     "ms-toolsai.jupyter-keymap": {
       "repository": "https://github.com/microsoft/vscode-jupyter-keymap",
