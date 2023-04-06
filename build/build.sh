@@ -68,9 +68,7 @@ fi
 echo "Publishing $EXTENSION_NAME, version $EXTENSION_REPOSITORY"
 docker run --cidfile "$EXTENSION_NAME"-builder-id "$EXTENSION_NAME"-builder
 BUILDER_CONTAINER_ID=$(cat "$EXTENSION_NAME"-builder-id)
-docker cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME-$EXTENSION_REVISION.vsix ./
-docker cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME-$EXTENSION_REVISION-sources.tar.gz ./
+docker cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME.vsix ./
+#docker cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME-$EXTENSION_REVISION-sources.tar.gz ./
 docker stop $BUILDER_CONTAINER_ID
 rm ./$EXTENSION_NAME-builder-id
-
-#Output to manifest?

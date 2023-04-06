@@ -28,8 +28,8 @@ RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     cd quarkus-ls && git checkout 0.13.0 && cd .. && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
-    rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
+    #rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
     npm install -g @vscode/vsce@${extension_vsce} gulp-cli@2.3.0 --unsafe-perm=true && \
     if [[ -f yarn.lock ]]; then yarn install; \
     else npm install --unsafe-perm=true --allow-root; fi && \
-    vsce package --out /${extension_name}-${extension_revision}.vsix
+    vsce package --out /${extension_name}.vsix

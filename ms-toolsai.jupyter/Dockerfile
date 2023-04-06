@@ -37,9 +37,10 @@ RUN dnf -y install python38 python3-pip platform-python-pip && \
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
-    rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
+    #rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
     npm install -g @vscode/vsce@${extension_vsce} gulp-cli@2.3.0 && \
-    npm install  --unsafe-perm=true --allow-root && \
+    npm install zeromq@6.0.0-beta.6 && \
+    npm install  --unsafe-perm=true --allow-root --ignore-scripts && \
 #--loglevel silly
     python3 -m pip --disable-pip-version-check install -t ./pythonFiles/lib/python --no-cache-dir \
      --implementation py --no-deps --upgrade -r ./requirements.txt --no-user && \

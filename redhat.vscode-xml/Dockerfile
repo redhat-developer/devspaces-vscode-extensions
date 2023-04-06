@@ -28,7 +28,7 @@ RUN dnf install -y jq
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
-    rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
+    #rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
     echo ">> REPLACE in package-lock.json" && \
     REPLACE_FROM="https://repository.engineering.redhat.com/nexus/repository/registry.npmjs.org" && \
     REPLACE_TO="https://registry.npmjs.org" && \
@@ -43,4 +43,4 @@ RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     curl ${XML_SERVER_URL}/${XML_SERVER_VERSION}/${XML_SERVER_FILE} -o ${XML_SERVER_FILE} && \
     echo "$(sha1sum ${XML_SERVER_FILE})" && \
     cd .. && \
-    vsce package --out /${extension_name}-${extension_revision}.vsix
+    vsce package --out /${extension_name}.vsix

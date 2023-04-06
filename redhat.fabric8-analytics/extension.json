@@ -1,5 +1,0 @@
-{
-  "repository": "https://github.com/fabric8-analytics/fabric8-analytics-vscode-extension",
-  "revision": "0.3.6",
-  "packageManager" :"npm@6.14.17"
-}

@@ -7,38 +7,31 @@
 #
 # SPDX-License-Identifier: EPL-2.0
 #
+# Checks the Visual Studio extension for updates and returns true if it finds changes so the 
+# jenkins job knows to build the plugin.
 
-set -ex
+set -e
 
-PLUGINS=$(ls)
-UPDATES=""
+EXTENSION_NAME=$1
 
-for EXTENSION_NAME in $PLUGINS
-do
-  if test -f "$EXTENSION_NAME/extension.json"; then
-    EXTENSION_JSON="$EXTENSION_NAME/extension.json"
+UPDATE=$(cat "plugin-config.json" | jq -r .Plugins[\"$EXTENSION_NAME\"][\"update\"])
 
-    echo "EXTENSION_JSON: $EXTENSION_JSON"
+if [ "$UPDATE" = "false" ]; then 
+  echo "false"
+  exit 
+fi
 
-    EXTENSION_REPOSITORY=$(cat "$EXTENSION_JSON" | jq -r .repository)
-    EXTENSION_REVISION=$(cat "$EXTENSION_JSON" | jq -r .revision)
+EXTENSION_REPOSITORY=$(cat "plugin-config.json" | jq -r .Plugins[\"$EXTENSION_NAME\"][\"repository\"])
+EXTENSION_REVISION=$(cat "plugin-config.json" | jq -r .Plugins[\"$EXTENSION_NAME\"][\"revision\"])
 
-    CURRENT_REVISION=$(git ls-remote $EXTENSION_REPOSITORY HEAD)
-    CURRENT_REVISION=${CURRENT_REVISION:0:40}
+CURRENT_REVISION=$(git ls-remote $EXTENSION_REPOSITORY HEAD)
+CURRENT_REVISION=${CURRENT_REVISION:0:40}
 
-    echo $CURRENT_REVISION
+if [[ $CURRENT_REVISION != $EXTENSION_REVISION ]]; then
+  FILE=$(cat "plugin-config.json" | jq -r ".Plugins[\"$EXTENSION_NAME\"][\"revision\"] |= \"$CURRENT_REVISION\"")
+  echo "${FILE}" > "plugin-config.json"
 
-    if [[ $CURRENT_REVISION != $EXTENSION_REVISION ]]; then
-      FILE=$(cat $EXTENSION_JSON | jq -r .revision' |= '"\"$CURRENT_REVISION\"")
-      echo "$FILE" > $EXTENSION_JSON
+  echo "true"
+fi
 
-      UPDATES="$UPDATES$EXTENSION_NAME "
-    fi
-  fi
-
-echo $UPDATES > updates.txt
-
-done
-
-
-
+echo "false"

@@ -80,27 +80,42 @@
     },
     "ms-python.python": {
       "repository": "https://github.com/microsoft/vscode-python",
-      "revision": "61f93c387960a33062d0f40d8a732d4153872cc0",
+      "revision": "1840a1550e265f8761f959dd5276737308e36d26",
       "update": "true"
     },
     "ms-toolsai.jupyter": {
       "repository": "https://github.com/microsoft/vscode-jupyter",
-      "revision": "a049d129fb1aea9d4691c7bf3acbc5ed7c8dc3c1",
+      "revision": "00af4be6f911300a72520d63111810fea9bbea51",
       "update": "true",
       "ubi8Image": "nodejs-16:1-90",
       "packageManager": "npm@8.15.1"
     },
     "ms-toolsai.jupyter-keymap": {
       "repository": "https://github.com/microsoft/vscode-jupyter-keymap",
-      "revision": "a9650a48c2a7aa1e1b87d4ad0dd478ad7b8b8ef6",
+      "revision": "962e017bd788b3b6bbf5695cb6e396362ccb24cb",
       "update": "true"
     },
     "ms-toolsai.jupyter-renderers": {
       "repository": "https://github.com/microsoft/vscode-notebook-renderers",
-      "revision": "bb2da99df33751e46fd37d2bdf08a07146336e3a",
+      "revision": "ecd15207005a43aeec5c76592161338730d5adc9",
       "update": "true",
       "ubi8Image": "nodejs-16:1-90",
       "packageManager": "npm@8.15.1"
+    },
+    "ms-vscode.js-debug": {
+      "repository": "https://github.com/microsoft/vscode-js-debug",
+      "revision": "v1.77.2",
+      "update": "false"
+    },
+    "ms-vscode.js-debug-companion": {
+      "repository": "https://github.com/microsoft/vscode-js-debug-companion",
+      "revision": "v1.0.18",
+      "update": "false"
+    },
+    "ms-vscode.vscode-js-profile-table": {
+      "repository": "https://github.com/microsoft/vscode-js-profile-visualizer",
+      "revision": "v1.0.3",
+      "update": "false"
     },
     "muhammad-sammy.csharp": {
       "repository": "https://github.com/muhammadsammy/free-omnisharp-vscode",
@@ -117,7 +132,7 @@
       "repository": "https://github.com/fabric8-analytics/fabric8-analytics-vscode-extension",
       "revision": "0.3.6",
       "update": "true",
-      "packageManager" :"npm@6.14.17"
+      "packageManager": "npm@6.14.17"
     },
     "redhat.java": {
       "repository": "https://github.com/redhat-developer/vscode-java",
@@ -144,7 +159,7 @@
       "revision": "v1.12.0",
       "update": "true",
       "ubi8Image": "nodejs-14:1-101",
-      "packageManager" :"npm@6.14.17"
+      "packageManager": "npm@6.14.17"
     },
     "redhat.vscode-redhat-account": {
       "repository": "https://github.com/redhat-developer/vscode-redhat-account",
@@ -192,6 +207,5 @@
       "revision": "0.38.1",
       "update": "true"
     }
-
   }
 }
