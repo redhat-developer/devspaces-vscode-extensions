@@ -21,6 +21,7 @@ USER root
 WORKDIR /
 
 RUN npm install -g ${extension_manager}
+RUN dnf install -y libsecret
 
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
