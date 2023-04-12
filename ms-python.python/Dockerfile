@@ -21,6 +21,11 @@ USER root
 WORKDIR /
 
 RUN npm install -g ${extension_manager}
+RUN dnf -y install python36 python3-six python3-pip platform-python-pip 
+RUN /usr/bin/python3 -m pip install --upgrade pip
+
+# activating CI/production mode to reduce size of webpack output
+ENV TRAVIS=true
 
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
@@ -29,4 +34,5 @@ RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     npm install -g @vscode/vsce@${extension_vsce} gulp-cli@2.3.0 && \
     if [[ -f yarn.lock ]]; then yarn install; \
     else npm install --unsafe-perm=true --allow-root; fi && \
+    gulp clean && gulp prePublishBundle && \
     vsce package --out /${extension_name}.vsix

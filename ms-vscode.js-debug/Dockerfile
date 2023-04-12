@@ -29,4 +29,6 @@ RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     npm install -g @vscode/vsce@${extension_vsce} gulp-cli@2.3.0 && \
     if [[ -f yarn.lock ]]; then yarn install; \
     else npm install --unsafe-perm=true --allow-root; fi && \
-    vsce package --out /${extension_name}.vsix
+    npm run package && \
+    ls dist && \
+    mv ./dist/js-debug.vsix /ms-vscode.js-debug.vsix
