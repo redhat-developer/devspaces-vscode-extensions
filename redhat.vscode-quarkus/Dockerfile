@@ -20,15 +20,21 @@ ARG extension_vsce
 USER root
 WORKDIR /
 
+ENV QUARKUS_VERSION="0.14.1"
+
 RUN npm install -g ${extension_manager}
 
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     #clone quarkus first
     git clone https://github.com/redhat-developer/quarkus-ls && \
-    cd quarkus-ls && git checkout 0.13.0 && cd .. && \
+    cd quarkus-ls && git checkout ${QUARKUS_VERSION} && \
+    rm -rf ./.git && tar -czvf /quarkus-ls-${QUARKUS_VERSION}-sources.tar.gz ./ && \
+    cd .. && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
-    #rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
+    #Copy quarkus source into extension source to package both
+    cp /quarkus-ls-${QUARKUS_VERSION}-sources.tar.gz ./ && \
+    rm -rf ./.git && tar -czvf /${extension_name}-sources.tar.gz ./ && \
     npm install -g @vscode/vsce@${extension_vsce} gulp-cli@2.3.0 --unsafe-perm=true && \
     if [[ -f yarn.lock ]]; then yarn install; \
     else npm install --unsafe-perm=true --allow-root; fi && \

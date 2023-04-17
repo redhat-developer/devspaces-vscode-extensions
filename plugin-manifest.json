@@ -1,0 +1,158 @@
+{
+  "Purpose": "To track the sha256sum values of Visual Studio Plugins used by PluginRegistry and associated sources",
+  "Version": "1.0",
+  "Plugins": {
+    "atlassian.atlascode": {
+      "source": "",
+      "vsix": ""
+    },
+    "bmewburn.vscode-intelephense-client": {
+      "source": "97bb1d36236b10786c8f91a1d36569dd820aeffd74a53a9156173522ca58fcb1",
+      "vsix": "2e90e4960dec6025eecac1969250b38cbc3b204ecdda7c830dd2df270fbc1a44"
+    },
+    "dbaeumer.vscode-eslint": {
+      "source": "",
+      "vsix": ""
+    },
+    "donjayamanne.githistory": {
+      "source": "",
+      "vsix": ""
+    },
+    "eamodio.gitlens": {
+      "source": "",
+      "vsix": ""
+    },
+    "eclipse-cdt.cdt-gdb-vscode": {
+      "source": "",
+      "vsix": ""
+    },
+    "esbenp.prettier-vscode": {
+      "source": "",
+      "vsix": ""
+    },
+    "felixfbecker.php-debug": {
+      "source": "be45fa892f4a6dd839796c5e71fb749c5c5381c1eaff57d816006176ff5d037a",
+      "vsix": "2e498a6b33f1a1d993d20b25e4e02bc540ac107be2ed5c612b42c3b4ae3ef943"
+    },
+    "github.vscode-pull-request-github": {
+      "source": "",
+      "vsix": ""
+    },
+    "gitlab.gitlab-workflow": {
+      "source": "",
+      "vsix": ""
+    },
+    "golang.go": {
+      "source": "",
+      "vsix": ""
+    },
+    "jfrog.jfrog-vscode-extension": {
+      "source": "",
+      "vsix": ""
+    },
+    "llvm-vs-code-extensions.vscode-clangd": {
+      "source": "",
+      "vsix": ""
+    },
+    "ms-kubernetes-tools.vscode-kubernetes-tools": {
+      "source": "",
+      "vsix": ""
+    },
+    "ms-python.python": {
+      "source": "",
+      "vsix": ""
+    },
+    "ms-toolsai.jupyter": {
+      "source": "",
+      "vsix": ""
+    },
+    "ms-toolsai.jupyter-keymap": {
+      "source": "",
+      "vsix": ""
+    },
+    "ms-toolsai.jupyter-renderers": {
+      "source": "",
+      "vsix": ""
+    },
+    "ms-vscode.js-debug": {
+      "source": "",
+      "vsix": ""
+    },
+    "ms-vscode.js-debug-companion": {
+      "source": "",
+      "vsix": ""
+    },
+    "ms-vscode.vscode-js-profile-table": {
+      "source": "",
+      "vsix": ""
+    },
+    "muhammad-sammy.csharp": {
+      "source": "",
+      "vsix": ""
+    },
+    "redhat.ansible": {
+      "source": "",
+      "vsix": ""
+    },
+    "redhat.fabric8-analytics": {
+      "source": "",
+      "vsix": ""
+    },
+    "redhat.java": {
+      "source": "",
+      "vsix": ""
+    },
+    "redhat.vscode-commons": {
+      "source": "",
+      "vsix": ""
+    },
+    "redhat.vscode-microprofile": {
+      "source": "",
+      "vsix": ""
+    },
+    "redhat.vscode-openshift-connector": {
+      "source": "",
+      "vsix": ""
+    },
+    "redhat.vscode-quarkus": {
+      "source": "",
+      "vsix": ""
+    },
+    "redhat.vscode-redhat-account": {
+      "source": "",
+      "vsix": ""
+    },
+    "redhat.vscode-tekton-pipelines": {
+      "source": "",
+      "vsix": ""
+    },
+    "redhat.vscode-xml": {
+      "source": "",
+      "vsix": ""
+    },
+    "redhat.vscode-yaml": {
+      "source": "",
+      "vsix": ""
+    },
+    "sonarsource.sonarlint-vscode": {
+      "source": "",
+      "vsix": ""
+    },
+    "sonatypecommunity.vscode-iq-plugin": {
+      "source": "",
+      "vsix": ""
+    },
+    "timonwong.shellcheck": {
+      "source": "",
+      "vsix": ""
+    },
+    "vscjava.vscode-java-debug": {
+      "source": "",
+      "vsix": ""
+    },
+    "vscjava.vscode-java-test": {
+      "source": "",
+      "vsix": ""
+    }
+  }
+}

@@ -25,7 +25,7 @@ RUN npm install -g ${extension_manager}
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
-    #rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
+    rm -rf ./.git && tar -czvf /${extension_name}-sources.tar.gz ./ && \
     npm install -g @vscode/vsce@${extension_vsce} gulp-cli@2.3.0 && \
     if [[ -f yarn.lock ]]; then yarn install; \
     else npm install --unsafe-perm=true --allow-root; fi && \
