@@ -28,7 +28,7 @@ RUN dnf install -y jq
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
-    #rm -rf ./.git && tar -czvf /${extension_name}-${extension_revision}-sources.tar.gz ./ && \
+    rm -rf ./.git && tar -czvf /${extension_name}-sources.tar.gz ./ && \
     echo ">> REPLACE in package-lock.json" && \
     REPLACE_FROM="https://repository.engineering.redhat.com/nexus/repository/registry.npmjs.org" && \
     REPLACE_TO="https://registry.npmjs.org" && \
