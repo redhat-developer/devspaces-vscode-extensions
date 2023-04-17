@@ -91,8 +91,8 @@
       "vsix": ""
     },
     "redhat.ansible": {
-      "source": "",
-      "vsix": ""
+      "source": "8b85b827476eebe81f6eb67b53e211ea2b010b48eaec88f48b8b29e7fbb3445c",
+      "vsix": "574623766bec7f19c37df809e3342a513dc9b1b1843eeab468dbd104c8e554d7"
     },
     "redhat.fabric8-analytics": {
       "source": "",
@@ -143,8 +143,8 @@
       "vsix": ""
     },
     "timonwong.shellcheck": {
-      "source": "",
-      "vsix": ""
+      "source": "2027b7168b57a89cf540a4725d1c647caff4ef312f45a0f7107f4ac233ddd6a8",
+      "vsix": "e9bc3402d3324cc9181a3293390d27ed5ca8c62e9d31b987c1c5b61970a86ff4"
     },
     "vscjava.vscode-java-debug": {
       "source": "",

@@ -127,7 +127,7 @@
     },
     "redhat.ansible": {
       "repository": "https://github.com/ansible/vscode-ansible",
-      "revision": "v1.3",
+      "revision": "v2.0",
       "update": "true",
       "packageManager": "yarn@1.22.10"
     },
@@ -197,7 +197,7 @@
     },
     "timonwong.shellcheck": {
       "repository": "https://github.com/vscode-shellcheck/vscode-shellcheck",
-      "revision": "v0.32.0",
+      "revision": "v0.32.2",
       "update": "true"
     },
     "vscjava.vscode-java-debug": {
