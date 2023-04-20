@@ -3,16 +3,16 @@
   "Version": "1.0",
   "Plugins": {
     "atlassian.atlascode": {
-      "source": "ed2848843e504f9700fb6cac322773237de76841a271fcaa2245c5d26d9c223d",
-      "vsix": "6ceee2c7ed2c1713b0176763bb7454ed081eed473b6fbb809d184a30d96f6d9c"
+      "source": "06660efed1d7dea02ac1a0aef8494b6d950d30bdfc263c57c6aaf5ae66715256",
+      "vsix": "a2def27cc9ed570f7e0c9b428be3420ddc8131f6acfc7ad826d31599b1034490"
     },
     "bmewburn.vscode-intelephense-client": {
-      "source": "8c38ae3f49550767ea64990083da36af55da11814a338bd623c868b978a6c2d9",
-      "vsix": "50cbc277d7d566531716d30df0f3c69bafde95ec1302a606a5221e5b4b2e7e0f"
+      "source": "e9aa25458f3e0b7ad57cffa222b54bf8ecb190f050b5d0bbd4c7979e7b7b37f0",
+      "vsix": "b3f30f563833dc03e29d9fde538c37c836c5a81cade6041806f840d046fe5387"
     },
     "dbaeumer.vscode-eslint": {
-      "source": "9f72fc6a944c965a4a46f2e62251b1d205143e04f4972411dcdff64d71ad56e5",
-      "vsix": "c2138c5fb130498e6e33ceab68e6704e412c7f6871777420ec5be0a79621f8d0"
+      "source": "1556358e1e3102479a1a4bfbed5de24b87f4bfb57bfd8320f418570610c3d536",
+      "vsix": "2d63bbe45b913f755d410e7ff5ba704a26d8833d7474c79e33a2166a1ccf0b2c"
     },
     "donjayamanne.githistory": {
       "source": "d97409d371e0649691be558b61f24e7f88dff7852734cc300735a80bee2ef361",
