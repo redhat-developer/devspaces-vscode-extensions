@@ -7,12 +7,12 @@
       "vsix": "d35043452edd86f7155b136cf1884b7cfa95673579bfefcb651e3b68c01902ea"
     },
     "bmewburn.vscode-intelephense-client": {
-      "source": "64dc8e3ba67f0764980882f576fd638a15ebdfe956c5ab050ad425f7f9cca779",
-      "vsix": "ac78b5d4186031b1a32e8e00bf5b59873996b8cc662d192c275cd9639e62b91c"
+      "source": "c5f425204beb54d6f89e127ab8ebf61650f99935903bb7ed5f53eee95542e3e6",
+      "vsix": "ebd03b12514bc4e89512d4c872a49f9f8f1e08455671c6c2c9e19852c4535afc"
     },
     "dbaeumer.vscode-eslint": {
-      "source": "a62ccccf287d7200911393f4bf055b66b0e83be2e93ad9dc861d845153bff0d9",
-      "vsix": "dcf62288950cbb014249a27e310554cfe146f29f5c3e82f26d918db311d16575"
+      "source": "be0795d08bd457758278e8da8445adcf62c2e95a567d930f18f20b37c91947e3",
+      "vsix": "7aba1e5f6bc020c751a73b9a0f45f8ca512f1e47e3bf4d94a896e6658085852b"
     },
     "donjayamanne.githistory": {
       "source": "a82abaa8853d515703381883f030a3ebb754658a69404f7fe859b0405f789163",
@@ -23,16 +23,16 @@
       "vsix": "77f604bc7dcd9da2d345d3f126909da75f098ba3221624bbf403725666d2069b"
     },
     "eclipse-cdt.cdt-gdb-vscode": {
-      "source": "a0169e4b8f06d5ca00f70546546acc7f628d76c31d12a9ea90b60e09d74b4f4b",
-      "vsix": "61520eb1f64e06e81e6b6c0a6e00e663dc61eafedfbf02d1fb54c3e0a6abebae"
+      "source": "086a94c77a814076d329b1e7e049d7e239777270a0384f1b716d2044d8e3f627",
+      "vsix": "c924ee80a0bacc7689aad75992a8dd2beffecae2cd1370ad950dcb376d5dadd1"
     },
     "esbenp.prettier-vscode": {
       "source": "525a1587ccc2a31e2d4e89632adf5e0192f33e117d31e872d323c983e93e59d5",
       "vsix": "990522fb2719363fdcf7371306913b577acf0193bf91eb80c109d54daabdc5b6"
     },
     "felixfbecker.php-debug": {
-      "source": "3a7276596e7fc6bce5dc1e0285a047bcfb698db545dcf32133a529e1c06eef5d",
-      "vsix": "6671590bb485183f488db33aa9c08011c6d3da0d5819518893e1bc7c2d28cd0d"
+      "source": "b46fe225e625e62a5c4d39d5e2977c562a05e3ef9a2dae5784b31bb146b75766",
+      "vsix": "8b00a53b8215fc62ed460ed8c07a16d3706f5c4423857af9c8e4b9d02008f272"
     },
     "github.vscode-pull-request-github": {
       "source": "8aa58d79ad138234146bd00f4273d1aa53b815735f37afd8e73e6a246513f94f",
@@ -43,16 +43,16 @@
       "vsix": "9f2ffae4ac6f4e1541ea12b7b6d9948ace5e1f13442282bdfc8ecd5818c3227f"
     },
     "golang.go": {
-      "source": "76969e39511522d92093d820449adf6e46a0f9e6ff96d2dff2190491f2da5a19",
-      "vsix": "8f552197b43f2af9be3f20efd51a5880020132f799b4dbad8482b8f4389f07f0"
+      "source": "0f42c06117732d28ffd22d26cd5b0120d66fcc38ef5ca3e55a92784496a4e796",
+      "vsix": "c5359b3b36048b1a60d5dd203898ad66d361d175ad896eef10c2f5120a8fe346"
     },
     "jfrog.jfrog-vscode-extension": {
-      "source": "ec08c1c8070c9f37f7659bc3ab8a39ff4eaed665e69b925774b60ef6df06ee44",
-      "vsix": "5760a8c26c7e544473af38184a1dd58dca258e65ba8cb83bcfeaa20221ef3230"
+      "source": "a894b62e1a4ed1c9fcdce22a40666ebfe268bb9ded193a219324103e8cf0459f",
+      "vsix": "ce6e4a3f3be9f2ab407afeb917773cd201a810ee53c6232d5fa08d9ad6f95b59"
     },
     "llvm-vs-code-extensions.vscode-clangd": {
-      "source": "6314b9566b882512296dc9c1041c98ab01b39cc2d6a58a5328f14360fbaebef1",
-      "vsix": "e606503f1ee3e91aebd6cc81421ca92183dbc99164001763b396edf75e520f38"
+      "source": "aceb008fd7574b56b5483ad0e8eb14b1e2114fd406a415a6f17f041c888f848d",
+      "vsix": "438ab4ae74d83b94ad626dde9b1ea742aacc68b373722a5bf895ab288cc75353"
     },
     "ms-kubernetes-tools.vscode-kubernetes-tools": {
       "source": "754f2d67a9e8070a5be55c25fd4bec894235beb1467bb16182ed618a9420857e",
@@ -67,8 +67,8 @@
       "vsix": ""
     },
     "ms-toolsai.jupyter-keymap": {
-      "source": "cc369a4c947f1bacf2bc7447185fdefd2d6a5eeb5fe470b5eca5093407beb4c1",
-      "vsix": "1ebcee6f82f24cdeafeeb62bc2a9c0b2c6595c2e230b7bc11ee820dd28a10d86"
+      "source": "6a65210680be86a1ce2f5f8d8ccbb439e8ec772c20929f024ae7165ebcf9d1bb",
+      "vsix": "586cbf742aefdcf2dcf40544f3eeaf07a5003de914b7e531128650da793cf051"
     },
     "ms-toolsai.jupyter-renderers": {
       "source": "44292df4bfb07a23ca666b0698e452aced2c03b8a8a205f2e71b7fb6d26fceac",
