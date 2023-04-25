@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2020 Red Hat, Inc.
+# Copyright (c) 2020-2023 Red Hat, Inc.
 # This program and the accompanying materials are made
 # available under the terms of the Eclipse Public License 2.0
 # which is available at https://www.eclipse.org/legal/epl-2.0/
@@ -20,7 +20,7 @@ ARG extension_vsce
 USER root
 WORKDIR /
 
-RUN npm install -g npm@latest ${extension_manager} 
+RUN npm install -g ${extension_manager}
 
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
@@ -29,5 +29,4 @@ RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     npm install -g @vscode/vsce@${extension_vsce} gulp-cli@2.3.0 && \
     if [[ -f yarn.lock ]]; then yarn install; \
     else npm install --unsafe-perm=true --allow-root; fi && \
-    # Adding --no-dependencies for now since there is an npm list issue during packaging 
-    vsce package --out /${extension_name}.vsix --baseContentUrl https://bitbucket.org/atlassianlabs/atlascode/src/main/ --no-dependencies
+    vsce package --out /${extension_name}.vsix --no-dependencies
