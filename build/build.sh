@@ -46,7 +46,7 @@ fi
 
 echo "Building $EXTENSION_NAME, version $EXTENSION_REPOSITORY"
 if test -f "$EXTENSION_NAME/Dockerfile"; then
-    docker build --no-cache=true \
+    podman build --no-cache=true \
         --build-arg extension_name="$EXTENSION_NAME" \
         --build-arg extension_repository="$EXTENSION_REPOSITORY" \
         --build-arg extension_revision="$EXTENSION_REVISION" \
@@ -55,7 +55,7 @@ if test -f "$EXTENSION_NAME/Dockerfile"; then
         --build-arg extension_vsce="$EXTENSION_VSCE" \
         -t "$EXTENSION_NAME"-builder "$EXTENSION_NAME"/
 else
-    docker build --no-cache=true \
+    podman build --no-cache=true \
         --build-arg extension_name="$EXTENSION_NAME" \
         --build-arg extension_repository="$EXTENSION_REPOSITORY" \
         --build-arg extension_revision="$EXTENSION_REVISION" \
@@ -66,11 +66,12 @@ else
 fi
 
 echo "Publishing $EXTENSION_NAME, version $EXTENSION_REPOSITORY"
-docker run --cidfile "$EXTENSION_NAME"-builder-id "$EXTENSION_NAME"-builder
+podman run --cidfile="$EXTENSION_NAME"-builder-id "$EXTENSION_NAME"-builder
 BUILDER_CONTAINER_ID=$(cat "$EXTENSION_NAME"-builder-id)
-docker cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME.vsix ./
-docker cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME-sources.tar.gz ./
-docker stop $BUILDER_CONTAINER_ID
+podman cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME.vsix ./
+podman cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME-sources.tar.gz ./
+podman stop $BUILDER_CONTAINER_ID
+podman system prune -a -f
 rm ./$EXTENSION_NAME-builder-id
 
 # Get SHA256 of vsix and sources files and add to plugin-manifest.json for the Brew build
