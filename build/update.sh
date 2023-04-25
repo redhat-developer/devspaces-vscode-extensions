@@ -7,6 +7,8 @@
 #
 # SPDX-License-Identifier: EPL-2.0
 #
+# Runs without arguments to check for updates to the Visual Studio plugins
+# listed in plugin-config.json.
 
 set -e
 
