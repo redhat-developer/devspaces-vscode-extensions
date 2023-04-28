@@ -28,8 +28,6 @@ Options:
 if [[ -z "$1" ]]; then usage; fi
 if [[ ! -z "$2" ]] && [[ $2 = "--clean" ]]; then
     CLEAN=1
-else
-    usage
 fi
 
 EXTENSION_NAME="$1"

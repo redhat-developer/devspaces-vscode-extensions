@@ -139,8 +139,10 @@
     },
     "redhat.java": {
       "repository": "https://github.com/redhat-developer/vscode-java",
-      "revision": "v1.17.0",
-      "update": "true"
+      "revision": "v1.18.0",
+      "update": "true",
+      "ubi8Image": "nodejs-14:1-101",
+      "packageManager": "npm@6.14.17"
     },
     "redhat.vscode-commons": {
       "repository": "https://github.com/redhat-developer/vscode-commons",
