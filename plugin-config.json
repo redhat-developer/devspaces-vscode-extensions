@@ -115,15 +115,13 @@
     },
     "ms-vscode.vscode-js-profile-table": {
       "repository": "https://github.com/microsoft/vscode-js-profile-visualizer",
-      "revision": "v1.0.6",
-      "update": "true",
-      "ubi8Image": "nodejs-16:1-90",
-      "packageManager": "npm@8.15.1"
+      "revision": "v1.0.5",
+      "update": "false"
     },
     "muhammad-sammy.csharp": {
       "repository": "https://github.com/muhammadsammy/free-omnisharp-vscode",
-      "revision": "1.25.0",
-      "update": "true"
+      "revision": "ed00a7dfe6a744c25348a2522756259df1ff9e5a",
+      "update": "false"
     },
     "redhat.ansible": {
       "repository": "https://github.com/ansible/vscode-ansible",
@@ -168,8 +166,8 @@
     },
     "redhat.vscode-redhat-account": {
       "repository": "https://github.com/redhat-developer/vscode-redhat-account",
-      "revision": "v0.0.7",
-      "update": "true"
+      "revision": "b1e57fae4120291427bfea9685c4b069a2235405",
+      "update": "false"
     },
     "redhat.vscode-tekton-pipelines": {
       "repository": "https://github.com/redhat-developer/vscode-tekton",
