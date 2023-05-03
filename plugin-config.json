@@ -105,17 +105,17 @@
     },
     "ms-vscode.js-debug": {
       "repository": "https://github.com/microsoft/vscode-js-debug",
-      "revision": "v1.77.2",
-      "update": "true"
+      "revision": "v1.78.0",
+      "update": "false"
     },
     "ms-vscode.js-debug-companion": {
       "repository": "https://github.com/microsoft/vscode-js-debug-companion",
       "revision": "v1.0.18",
-      "update": "true"
+      "update": "false"
     },
     "ms-vscode.vscode-js-profile-table": {
       "repository": "https://github.com/microsoft/vscode-js-profile-visualizer",
-      "revision": "v1.0.5",
+      "revision": "v1.0.3",
       "update": "false"
     },
     "muhammad-sammy.csharp": {
