@@ -61,7 +61,7 @@
     },
     "golang.go": {
       "repository": "https://github.com/golang/vscode-go",
-      "revision": "v0.38.0-rc.3",
+      "revision": "v0.38.0",
       "update": "true"
     },
     "jfrog.jfrog-vscode-extension": {
@@ -85,6 +85,7 @@
       "update": "true"
     },
     "ms-toolsai.jupyter": {
+      "comment": "Cannot be built due to https://github.com/microsoft/vscode-jupyter/issues/13260, tracked in https://issues.redhat.com/browse/CRW-4325",
       "repository": "https://github.com/microsoft/vscode-jupyter",
       "revision": "2023.03.100",
       "update": "false",
@@ -92,11 +93,13 @@
       "packageManager": "npm@8.15.1"
     },
     "ms-toolsai.jupyter-keymap": {
+      "comment": "Version: ",
       "repository": "https://github.com/microsoft/vscode-jupyter-keymap",
       "revision": "962e017bd788b3b6bbf5695cb6e396362ccb24cb",
       "update": "true"
     },
     "ms-toolsai.jupyter-renderers": {
+      "comment": "Version: ",
       "repository": "https://github.com/microsoft/vscode-notebook-renderers",
       "revision": "ecd15207005a43aeec5c76592161338730d5adc9",
       "update": "true",
@@ -104,21 +107,25 @@
       "packageManager": "npm@8.15.1"
     },
     "ms-vscode.js-debug": {
+      "comment": "Needed for the devspaces-code build. Version must be kept in sync with  https://github.com/microsoft/vscode/blob/main/product.json#L35",
       "repository": "https://github.com/microsoft/vscode-js-debug",
       "revision": "v1.78.0",
       "update": "false"
     },
     "ms-vscode.js-debug-companion": {
+      "comment": "Needed for the devspaces-code build. Version must be kept in sync with  https://github.com/microsoft/vscode/blob/main/product.json#L35",
       "repository": "https://github.com/microsoft/vscode-js-debug-companion",
       "revision": "v1.0.18",
       "update": "false"
     },
     "ms-vscode.vscode-js-profile-table": {
+      "comment": "Needed for the devspaces-code build. Version must be kept in sync with  https://github.com/microsoft/vscode/blob/main/product.json#L35",
       "repository": "https://github.com/microsoft/vscode-js-profile-visualizer",
       "revision": "v1.0.3",
       "update": "false"
     },
     "muhammad-sammy.csharp": {
+      "comment": "Version: ",
       "repository": "https://github.com/muhammadsammy/free-omnisharp-vscode",
       "revision": "ed00a7dfe6a744c25348a2522756259df1ff9e5a",
       "update": "false"
@@ -143,6 +150,7 @@
       "packageManager": "npm@6.14.17"
     },
     "redhat.vscode-commons": {
+      "comment": "Version: ",
       "repository": "https://github.com/redhat-developer/vscode-commons",
       "revision": "021b0165bb5ba05e107ee7e31d1e59a7a73f473c",
       "update": "true"
@@ -165,6 +173,7 @@
       "packageManager": "npm@6.14.17"
     },
     "redhat.vscode-redhat-account": {
+      "comment": "Version: ",
       "repository": "https://github.com/redhat-developer/vscode-redhat-account",
       "revision": "b1e57fae4120291427bfea9685c4b069a2235405",
       "update": "false"
@@ -186,6 +195,7 @@
       "packageManager": "yarn@1.22.10"
     },
     "sonarsource.sonarlint-vscode": {
+      "comment": "Version: ",
       "repository": "https://github.com/SonarSource/sonarlint-vscode",
       "revision": "3.17.0+67752",
       "update": "true"
