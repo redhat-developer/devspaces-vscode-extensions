@@ -93,13 +93,13 @@
       "packageManager": "npm@8.15.1"
     },
     "ms-toolsai.jupyter-keymap": {
-      "comment": "Version: ",
+      "comment": "Version: 1.1.0",
       "repository": "https://github.com/microsoft/vscode-jupyter-keymap",
       "revision": "962e017bd788b3b6bbf5695cb6e396362ccb24cb",
       "update": "true"
     },
     "ms-toolsai.jupyter-renderers": {
-      "comment": "Version: ",
+      "comment": "Version: 1.0.15",
       "repository": "https://github.com/microsoft/vscode-notebook-renderers",
       "revision": "ecd15207005a43aeec5c76592161338730d5adc9",
       "update": "true",
@@ -125,9 +125,8 @@
       "update": "false"
     },
     "muhammad-sammy.csharp": {
-      "comment": "Version: ",
       "repository": "https://github.com/muhammadsammy/free-omnisharp-vscode",
-      "revision": "ed00a7dfe6a744c25348a2522756259df1ff9e5a",
+      "revision": "1.25.0",
       "update": "false"
     },
     "redhat.ansible": {
@@ -150,7 +149,7 @@
       "packageManager": "npm@6.14.17"
     },
     "redhat.vscode-commons": {
-      "comment": "Version: ",
+      "comment": "Version: 0.0.6",
       "repository": "https://github.com/redhat-developer/vscode-commons",
       "revision": "021b0165bb5ba05e107ee7e31d1e59a7a73f473c",
       "update": "true"
@@ -173,7 +172,7 @@
       "packageManager": "npm@6.14.17"
     },
     "redhat.vscode-redhat-account": {
-      "comment": "Version: ",
+      "comment": "Version: 0.1.0",
       "repository": "https://github.com/redhat-developer/vscode-redhat-account",
       "revision": "b1e57fae4120291427bfea9685c4b069a2235405",
       "update": "false"
@@ -195,7 +194,6 @@
       "packageManager": "yarn@1.22.10"
     },
     "sonarsource.sonarlint-vscode": {
-      "comment": "Version: ",
       "repository": "https://github.com/SonarSource/sonarlint-vscode",
       "revision": "3.17.0+67752",
       "update": "true"
