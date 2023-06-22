@@ -153,6 +153,22 @@
     "vscjava.vscode-java-test": {
       "source": "a2a8899fe0e652f7007627f8873d77a209a82db41591121b808df1cb7a817e52",
       "vsix": "1a726bcfa95222802614fd03d466326226e77b9a0a81642449583c60de1a4715"
+    },
+    "xdebug.php-debug": {
+      "vsix": "f7b72ad69254515c8b1cc566e2c9f0f75b6d9204899bc06190a67ebcd238c7ad",
+      "source": "4931b2aaeb2869b1a371e4355b3e56f4de5d89eedafda420d3c34472e74259d9"
+    },
+    "ms-toolsai.vscode-jupyter-cell-tags": {
+      "vsix": "996ec3223550c4849a07e47ed809fd7bf58b7ca0c0ca960e121b20002e42b258",
+      "source": "460d37ac3c829a087dfaaaae63e5f478f00ef66aadf50501225d233f3426103b"
+    },
+    "ms-toolsai.vscode-jupyter-slideshow": {
+      "vsix": "a8e5628704755ed799ab29c16ffc7d0707235c9d9c8571733c4dd788185559f3",
+      "source": "5293c33a131673b4423b2ebad457845af3393f74e51e1a6d0456d8c239338756"
+    },
+    "ms-python.black-formatter": {
+      "vsix": "62e31ef6f8c04fcb84f29a753c198b0c8e16a429a96611ec0ac9ed3bc57f88d5",
+      "source": "0cd119da74f87b36da76d4c1df6039f69a5fdc92581d8a32c2a2ba4eb235f1e1"
     }
   }
 }

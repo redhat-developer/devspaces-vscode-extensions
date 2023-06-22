@@ -79,6 +79,11 @@
       "revision": "1.3.11",
       "update": "true"
     },
+    "ms-python.black-formatter": {
+      "repository": "https://github.com/microsoft/vscode-black-formatter",
+      "revision": "2023.2.0",
+      "update": "true"
+    },
     "ms-python.python": {
       "repository": "https://github.com/microsoft/vscode-python",
       "revision": "2023.8.0",
@@ -105,6 +110,18 @@
       "update": "true",
       "ubi8Image": "nodejs-16:1-90",
       "packageManager": "npm@8.15.1"
+    },
+    "ms-toolsai.vscode-jupyter-cell-tags": {
+      "comment": "Version: 0.1.8",
+      "repository": "https://github.com/Microsoft/vscode-jupyter-cell-tags",
+      "revision": "5d4f72e96414442cf3afd91d8adb8fa6807fd778",
+      "update": "true"
+    },
+    "ms-toolsai.vscode-jupyter-slideshow": {
+      "comment": "Version: 0.1.5",
+      "repository": "https://github.com/Microsoft/vscode-jupyter-slideshow",
+      "revision": "2cf41f6d1f8c8045a6810ce922378ce731aac806",
+      "update": "true"
     },
     "ms-vscode.js-debug": {
       "comment": "Needed for the devspaces-code build. Version must be kept in sync with  https://github.com/microsoft/vscode/blob/main/product.json#L35",
@@ -216,6 +233,11 @@
     "vscjava.vscode-java-test": {
       "repository": "https://github.com/microsoft/vscode-java-test",
       "revision": "0.38.2",
+      "update": "true"
+    },
+    "xdebug.php-debug": {
+      "repository": "https://github.com/xdebug/vscode-php-debug",
+      "revision": "v1.32.1",
       "update": "true"
     }
   }
