@@ -25,7 +25,7 @@ usage()
 Requires:
   - plugin-config.json (redhat-developer/devspaces-vscode-extensions)
   - openvsx-sync.json (redhat-developer/devspaces/dependencies/che-plugin-registry) 
-  - download-vsix.sh (redhat-developer/devspaces/dependencies/che-plugin-registry)
+  - download_vsix.sh (redhat-developer/devspaces/dependencies/che-plugin-registry)
 
 They will be downloaded if not found."
     exit
@@ -51,7 +51,7 @@ fi
 if [[ ! -f openvsx-sync.json ]]; then
   curl -sSLO https://raw.githubusercontent.com/redhat-developer/devspaces/$MIDSTM_BRANCH/dependencies/che-plugin-registry/openvsx-sync.json
 fi
-if [[ ! -f download-vsix.sh ]]; then
+if [[ ! -f download_vsix.sh ]]; then
   curl -sSLO https://raw.githubusercontent.com/redhat-developer/devspaces/$MIDSTM_BRANCH/dependencies/che-plugin-registry/build/scripts/download_vsix.sh
 fi
 if [[ ! -f plugin-config.json ]]; then
@@ -69,7 +69,7 @@ replaceField()
 
 # Update openvsx-sync.json
 chmod +x -R *.sh
-./download-vsix.sh -b $MIDSTM_BRANCH -j ./openvsx-sync.json --no-download 
+./download_vsix.sh -b $MIDSTM_BRANCH -j ./openvsx-sync.json --no-download 
 
 # Read in openvsx-sync.sh to get list of pluginregistry plugins
 pluginsOVSX=$(cat openvsx-sync.json | jq -r '.[].id')
