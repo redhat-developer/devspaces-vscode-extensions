@@ -165,6 +165,12 @@
       "ubi8Image": "nodejs-14:1-101",
       "packageManager": "npm@6.14.17"
     },
+    "redhat.project-initializer": {
+      "comment": "Version: 0.2.2",
+      "repository": "https://github.com/redhat-developer/vscode-project-initializer",
+      "revision": "9dd94f95811298b922c82c1766f2329b04ef6fae",
+      "update": "true"
+    },
     "redhat.vscode-commons": {
       "comment": "Version: 0.0.6",
       "repository": "https://github.com/redhat-developer/vscode-commons",

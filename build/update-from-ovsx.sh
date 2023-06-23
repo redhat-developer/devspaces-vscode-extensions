@@ -154,11 +154,12 @@ do
 
 done
 
-echo "New Extensions: 
-$new
----
-Updated Extensions:
+echo "Updated Extensions:
 $updates"
-
-echo "$new" > new.txt
 echo "$updates" > updates.txt
+
+if [[ ! "$new" = "" ]]; then
+  echo "New Extensions: 
+$new"
+  echo "$new" > new.txt
+fi
