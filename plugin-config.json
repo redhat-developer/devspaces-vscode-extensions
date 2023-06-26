@@ -245,6 +245,12 @@
       "repository": "https://github.com/xdebug/vscode-php-debug",
       "revision": "v1.32.1",
       "update": "true"
+    },
+    "vscode-task-manager": {
+      "comment": "Provides easy access to devfile commands/tasks",
+      "repository": "https://github.com/cnshenj/vscode-task-manager",
+      "revision": "1.0.0",
+      "update": "true"
     }
   }
 }

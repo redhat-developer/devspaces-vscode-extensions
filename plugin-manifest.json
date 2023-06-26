@@ -169,6 +169,10 @@
     "ms-python.black-formatter": {
       "vsix": "8f5e3a2c4564099986b0c20cfedadf02e7b931412afa62ab061ff2ca19db4cfc",
       "source": "72b64f82661a88ea14148a353a68c99cccf1c45c3a1399e613bba9cf11b05cec"
+    },
+    "vscode-task-manager": {
+      "vsix": "730bdc41bc897b15b375f6f30c0d2f6b786a16b882ed4ac5bd321fec532164d5",
+      "source": "12a5f71d38f1c4411da61cd3338f8be006f8a6af5831ebde443179094d18471c"
     }
   }
 }
