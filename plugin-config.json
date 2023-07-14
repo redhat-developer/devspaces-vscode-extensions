@@ -201,9 +201,10 @@
       "update": "true"
     },
     "redhat.vscode-tekton-pipelines": {
+      "comment": "Setting to latest commit as of 06/26/2023 because previous released version no longer builds.",
       "repository": "https://github.com/redhat-developer/vscode-tekton",
-      "revision": "v1.0.1",
-      "update": "true"
+      "revision": "97afeb1887774a3c1eccf3fd8a5ebea1ed53ee3a",
+      "update": "false"
     },
     "redhat.vscode-xml": {
       "repository": "https://github.com/redhat-developer/vscode-xml",
