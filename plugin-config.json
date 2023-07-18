@@ -32,13 +32,13 @@
     },
     "eclipse-cdt.cdt-gdb-vscode": {
       "repository": "https://github.com/eclipse-cdt-cloud/cdt-gdb-vscode",
-      "revision": "v0.0.99",
+      "revision": "v0.0.100",
       "update": "true",
       "packageManager": "yarn@1.22.10"
     },
     "esbenp.prettier-vscode": {
       "repository": "https://github.com/prettier/prettier-vscode",
-      "revision": "v9.16.0",
+      "revision": "v9.19.0",
       "update": "true",
       "packageManager": "yarn@1.22.10"
     },
@@ -50,13 +50,13 @@
     },
     "github.vscode-pull-request-github": {
       "repository": "https://github.com/microsoft/vscode-pull-request-github",
-      "revision": "v0.66.1",
+      "revision": "v0.68.0",
       "update": "true",
       "packageManager": "yarn@1.22.10"
     },
     "gitlab.gitlab-workflow": {
       "repository": "https://gitlab.com/gitlab-org/gitlab-vscode-extension.git/",
-      "revision": "v3.67.0",
+      "revision": "v3.68.0",
       "update": "true"
     },
     "golang.go": {
@@ -66,7 +66,7 @@
     },
     "jfrog.jfrog-vscode-extension": {
       "repository": "https://github.com/jfrog/jfrog-vscode-extension",
-      "revision": "v2.3.3",
+      "revision": "v2.3.4",
       "update": "true"
     },
     "llvm-vs-code-extensions.vscode-clangd": {
@@ -86,7 +86,7 @@
     },
     "ms-python.python": {
       "repository": "https://github.com/microsoft/vscode-python",
-      "revision": "2023.10.1",
+      "revision": "2023.12.0",
       "update": "true"
     },
     "ms-toolsai.jupyter": {
@@ -160,7 +160,7 @@
     },
     "redhat.java": {
       "repository": "https://github.com/redhat-developer/vscode-java",
-      "revision": "v1.19.0",
+      "revision": "v1.20.0",
       "update": "true",
       "ubi8Image": "nodejs-14:1-101",
       "packageManager": "npm@6.14.17"
@@ -208,7 +208,7 @@
     },
     "redhat.vscode-xml": {
       "repository": "https://github.com/redhat-developer/vscode-xml",
-      "revision": "0.25.0",
+      "revision": "0.26.1",
       "update": "true"
     },
     "redhat.vscode-yaml": {
@@ -219,7 +219,7 @@
     },
     "sonarsource.sonarlint-vscode": {
       "repository": "https://github.com/SonarSource/sonarlint-vscode",
-      "revision": "3.19.0",
+      "revision": "3.19.2",
       "update": "true"
     },
     "sonatypecommunity.vscode-iq-plugin": {
@@ -234,7 +234,7 @@
     },
     "vscjava.vscode-java-debug": {
       "repository": "https://github.com/microsoft/vscode-java-debug",
-      "revision": "0.51.0",
+      "revision": "0.52.0",
       "update": "true"
     },
     "vscjava.vscode-java-test": {
