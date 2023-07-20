@@ -169,6 +169,10 @@
     "ms-python.black-formatter": {
       "vsix": "8f5e3a2c4564099986b0c20cfedadf02e7b931412afa62ab061ff2ca19db4cfc",
       "source": "72b64f82661a88ea14148a353a68c99cccf1c45c3a1399e613bba9cf11b05cec"
+    },
+    "ms-python.isort": {
+      "vsix": "b6f8548efc77909b6b49c0ae37ea4f5a4403c4f1c77cdb999d8ca7712c137282",
+      "source": "c5c1983adceba0f15eb316ac8b27269ce9a4c15a3fb89ec4f9915727297bc901"
     }
   }
 }
