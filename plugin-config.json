@@ -79,6 +79,11 @@
       "revision": "1.3.13",
       "update": "true"
     },
+    "ms-python.isort": {
+      "repository": "https://github.com/microsoft/vscode-isort",
+      "revision": "2022.8.0",
+      "update": "true"
+    },
     "ms-python.black-formatter": {
       "repository": "https://github.com/microsoft/vscode-black-formatter",
       "revision": "2023.3.0-dev",
