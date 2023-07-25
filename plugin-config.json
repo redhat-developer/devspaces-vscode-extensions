@@ -56,7 +56,7 @@
     },
     "gitlab.gitlab-workflow": {
       "repository": "https://gitlab.com/gitlab-org/gitlab-vscode-extension.git/",
-      "revision": "v3.68.0",
+      "revision": "v3.68.4",
       "update": "true"
     },
     "golang.go": {
@@ -85,13 +85,14 @@
       "update": "true"
     },
     "ms-python.black-formatter": {
+      "comment": "Version: 2023.3.0-dev",
       "repository": "https://github.com/microsoft/vscode-black-formatter",
-      "revision": "2023.3.0-dev",
+      "revision": "e0f7830d7d76d92d4f0d7deb840a0d7fd4cbf788",
       "update": "true"
     },
     "ms-python.python": {
       "repository": "https://github.com/microsoft/vscode-python",
-      "revision": "2023.12.0",
+      "revision": "v2023.12.0",
       "update": "true"
     },
     "ms-toolsai.jupyter": {
@@ -153,8 +154,8 @@
     },
     "redhat.ansible": {
       "repository": "https://github.com/ansible/vscode-ansible",
-      "revision": "v2.4.78",
-      "update": "true",
+      "revision": "v2.4",
+      "update": "false",
       "packageManager": "yarn@1.22.10"
     },
     "redhat.fabric8-analytics": {
@@ -218,14 +219,14 @@
     },
     "redhat.vscode-yaml": {
       "repository": "https://github.com/redhat-developer/vscode-yaml",
-      "revision": "1.13.0",
+      "revision": "1.14.0",
       "update": "true",
       "packageManager": "yarn@1.22.10"
     },
     "sonarsource.sonarlint-vscode": {
       "repository": "https://github.com/SonarSource/sonarlint-vscode",
-      "revision": "3.19.2",
-      "update": "true"
+      "revision": "3.19.2+73908",
+      "update": "false"
     },
     "sonatypecommunity.vscode-iq-plugin": {
       "repository": "https://github.com/sonatype-nexus-community/vscode-iq-plugin",
