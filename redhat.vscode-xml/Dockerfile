@@ -28,7 +28,6 @@ RUN dnf install -y jq
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
-    rm -rf ./.git && tar -czvf /${extension_name}-sources.tar.gz ./ && \
     echo ">> REPLACE in package-lock.json" && \
     REPLACE_FROM="https://repository.engineering.redhat.com/nexus/repository/registry.npmjs.org" && \
     REPLACE_TO="https://registry.npmjs.org" && \
@@ -36,6 +35,7 @@ RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     npm install -g @vscode/vsce@${extension_vsce} gulp-cli@2.3.0 && \
     if [[ -f yarn.lock ]]; then yarn install; \
     else npm install --unsafe-perm=true --allow-root; fi && \
+    rm -rf ./.git && tar -czvf /${extension_name}-sources.tar.gz ./ && \
     echo ">> download XML server" && \
     export XML_SERVER_VERSION="$(cat package.json | jq -r .xmlServer.version)" && \
     mkdir ./server && cd ./server && \
