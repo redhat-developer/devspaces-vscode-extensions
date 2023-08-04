@@ -3,176 +3,176 @@
   "Version": "1.0",
   "Plugins": {
     "atlassian.atlascode": {
-      "source": "3512e3f63f243409ebf9a501b42e11400dab6f98ad11a9765ce7c991acceee24",
-      "vsix": "1e7afb7fed21a223f13eafce5d6e5a6bfc3fbb5826ed9986d4f980bbb49903f3"
+      "source": "72a616825ea68944ecabbd600744d1c3ab7022056e4eb9553e5022179a0f3ea3",
+      "vsix": "7bf9c0a9bf4a5ff7d24f2b58f8515ad455ecf4e976747c58ce47be8ec1715672"
     },
     "bmewburn.vscode-intelephense-client": {
-      "source": "fc2e5c9364ce55d8504699072f9fe597fe152e1b14658db6d4e01bb1577c7c35",
-      "vsix": "3e991c6d168cd2d827e7c98e99a8cfae91d84ed1b3d1e88e1273241e4849f6bd"
+      "source": "1203d092fe48d1784dd6e944b5c00e5463b4c8433f76aa58543de92700a26d35",
+      "vsix": "febc413b7e2ab0e9e173962e66c83e3a73f5bf20375885eefacbd05b8511f585"
     },
     "dbaeumer.vscode-eslint": {
-      "source": "cd3c207cc24ffa210687653d1a2be6b5340108246db2b572a06178efc5275269",
-      "vsix": "b72efabbae13a147023d800dddb71703c25c15ee825f8fb3e86abcbc287a2977"
+      "source": "68ba4fcf4efa855bbaea9ac1ec063c0ffab2abdf30dfe9cc7979e2be960c0c5f",
+      "vsix": "25eff912238ab3fb3482ca6cd0d72a42a87c0d8182c5e5b16553ce0fb0a9d885"
     },
     "donjayamanne.githistory": {
-      "source": "c4d0965595ba442ab93f01e644df68859e47b86179c8fae0c36f1a2b2fc36c76",
-      "vsix": "fff68d6dcdb0d7c58487ee2a209c9af8695577c1a25b138015e16b096b160d17"
+      "source": "516730b75a34c495b6be568bc6b32c958e477339c77f5099bb1a2ace0e82b178",
+      "vsix": "ca20df4ddc70e9f04550da266eec34be4058c7b15e56c47ee621aad155a807a6"
     },
     "eamodio.gitlens": {
-      "source": "17439690a4a6ff5b215444ed57815953b09274533bbf2107e808bffcce1724da",
-      "vsix": "cd960b58b5e9ccb75a055473f2980236cd7261dca99503ae874049b187ee3241"
+      "source": "37e0174b66067455243616d5efdf608cf37ebc776a211d3006a2524ce551cc28",
+      "vsix": "48b8562ffd251a4d3da68d79e195709db5e477d01cb34efedee6c7ab91cf365c"
     },
     "eclipse-cdt.cdt-gdb-vscode": {
-      "source": "5a370560aa12694265f793dee2ff5ed306bf7a8502db3937899e8dc6d0e0fa6d",
-      "vsix": "71e6e48ae7d07eefdff55ea55dc2413277babdfdceb528c0cb2eee84ef6af02c"
+      "source": "b39f5fd29aa1058bb31281df70ee8c5da1dc735caea26d5727260a4e9eac4ab8",
+      "vsix": "1d649a56af19b2a0dec4946b976628184b070f188385c31dabbde2192184af71"
     },
     "esbenp.prettier-vscode": {
-      "source": "0cc112cc5994f2ccb4a82ef135c04bd638b7a4dcc693fd712e6d2402e7b9edbd",
-      "vsix": "b2556cb09a022eba0db60180eeeebe146648669b4b179e1a06922f3188b6db9e"
+      "source": "883771f0a6c7de4d1bc554a1a9942d992278a9b3e4c99b7180589320f6fa5690",
+      "vsix": "8f4de288c72e94466ec40e37e155b4c30ebc5485bf7eaad611dde15c86f1dae2"
     },
     "felixfbecker.php-debug": {
-      "source": "4e68d126bab040d677cde4035154315984fe836e09bdc1113e2de48fbe7e1d09",
-      "vsix": "bf2384604d7b953ad4e87432e65859625d7f3862b6cabbe1f983c3f09ab96dc6"
+      "source": "2a8e120b9f2b52a640145ef33334afbfcd1e3e9172f1bf1ea73064b7fb4ca3ff",
+      "vsix": "52f94ca910c856e2573d963ed01eec56866cb1b0522fce079d1e4a69cfe6595f"
     },
     "github.vscode-pull-request-github": {
-      "source": "44b32223ec49381e82cd9393a2d6d30bc409adae84712c890ba6049c2f2bcf10",
-      "vsix": "4288b84322af8fe953c2a58c6c30a2f2212f72abbdd7ffb112b4d2a213c58d37"
+      "source": "5fb0d86458e164d3cfe6e8ea18ea83d90fe163c473fc0ea399640c5fda0bd218",
+      "vsix": "0a741a35f7bcaf1fb171fffc1262c9e4a3c5afd993c491017ec72c15276908d0"
     },
     "gitlab.gitlab-workflow": {
-      "source": "56dc99746aaa2e82b82f7c66c7f7393c7fe0639861f7aedc0c4a1303471602de",
-      "vsix": "1ad09557a6644c7003bb9dde204c8775085ad5958fb50796cc14fefafac8b572"
+      "source": "5e01ca5a2736e09184e72c7bcd40d0180b0ed9b80b1e0cb58402f7b297c0cc7d",
+      "vsix": "c1cb701e6a362d5fd9e7e628a9e307072b260a86b2ed7a7794cbec47f8cc1b03"
     },
     "golang.go": {
-      "source": "16d522f1f739c6031339fdc69d25f04d6bf9579b83e424df381c25f1026b9c0b",
-      "vsix": "f31b2ca7299ec612cfbc0c5560c6ebb83eb715014b9b7fdd3b31fbc4bc037ccb"
+      "source": "9b40ae42f4b2b71b7a76cbc34a22804219b835a783b3ef1b41fa4e6dfb886a8e",
+      "vsix": "19037738f4b4aed643f20e7818fc50d2f3f884477f16287c80c1b068dcff9eda"
     },
     "jfrog.jfrog-vscode-extension": {
-      "source": "5e43165725f25996c9e80866d0652a963cf5dee2c62d90394d24419393cf676e",
-      "vsix": "fccbe6a7021cc1c122a15aaa80540e5bd8668774b87d88fc5aada6e6b5a35c12"
+      "source": "b161e59a44ee8fcddc7a178b3dd579a055af3d16fe82aa0a7d70dc07904c4b22",
+      "vsix": "3b1793fb5f1a53893ee87b2ac9b6a12841b15cc4e06aca988cb3a565a4107b79"
     },
     "llvm-vs-code-extensions.vscode-clangd": {
-      "source": "4e97c7c362bb6e023780d3629d4d36e1325a0c66d78f7b0b2e238bbeb8a0024a",
-      "vsix": "21d5fefd7b0d94a7f37733281a5628ec13c99e4d3a9246d5b77f56138c580bd6"
+      "source": "21d7b00a583a283dde7e6f325c6d6190a7c2241aac46340069e1d43ae1f86b6e",
+      "vsix": "1f2b1e80294f7a567eef98201fd2b845600d17b225c09b496762b012cb913dde"
     },
     "ms-kubernetes-tools.vscode-kubernetes-tools": {
-      "source": "2876a0d561698fa8d3680a4ad116049cb5a8c536b0dc16874cf68eaf8dcdedee",
-      "vsix": "ce4446ae6aec2ffd40a484d64db7864c6c10836d0b174956e0b0cbe30c41db34"
+      "source": "bfff1357be4a862b26eb25ec3867744bbe9a963abf241366458dec742b7cf176",
+      "vsix": "9cee44cc68d53bc607577be88332d35d95a5ab089309fd71d01b5a6ee50b1817"
     },
     "ms-python.python": {
-      "source": "db606cc66791aef254d8289ecfa92732e81a1d5a7d72104ddc7d25c943913116",
-      "vsix": "f282432a049deff97731387ef8e0df23f3e61997fce4ef8622f63dfbc47f3a3e"
+      "source": "30a11fa1eba637824cdbd641a857957e52d4e937b43618aa669e5c09076c9382",
+      "vsix": "77f846810efc6fd9965dde4078e5ea54afae85e6f397eca083cdfb6b7305bc5d"
     },
     "ms-toolsai.jupyter": {
-      "source": "d52c8bc8653a2911d402b3aad9c9c044a661fb6802ceac2667871b03024416e3",
-      "vsix": "c067a4e79055799837f8e524099f175d87af22473587c530cfcb3ffb0013bcb2"
+      "source": "9ad6bbbb3fa0f8124429e7b60ff333f5005222c631ab8d88e6cce87f0aa9596c",
+      "vsix": "0a65ed38b8c3945804fc21314a6a4aaa1d9f2906e31e9993d082f8da7091081e"
     },
     "ms-toolsai.jupyter-keymap": {
-      "source": "2b71f2fb8e0998bd72e026a3f9f86ee28eb942af37499533cc6dda969098b218",
-      "vsix": "c5a2c0c3505967f076c968dbd426d1baf96d31751154329a76b8e28d6275b0da"
+      "source": "718b33042b6e2211a4219236bb66ebbe0f636017d05f47dd020e76efddc802a5",
+      "vsix": "e64e22e6ae6922a60f7810be7a982c270db9ed27f558603c63653e4d176823a0"
     },
     "ms-toolsai.jupyter-renderers": {
-      "source": "d936e95f39f5588de56dd2855c909924aab3a84b889b64fe07a144d5d8ae5119",
-      "vsix": "72760bb617025e7ac9a7aeafbe0d2f7e90fbc7453761b67d85b64a588690ce4c"
+      "source": "624370079471a635a22e9f47f358a6c9e869bcf1ca738f99cac9ebc5f619b402",
+      "vsix": "20beafb473007409871df09ffcd377decc321a5d6d414ad4da01d6bd7cfb40d4"
     },
     "ms-vscode.js-debug": {
-      "source": "64689c3ce8c56fd8bf7b2092c00505954db0c507c6fa6762d41d0cab05b55522",
-      "vsix": "852d6a3f6b0e7968cbd454c0de744dabf1e6f5b4eddab364d96c32b691f08992"
+      "source": "dda615a2be8e5b7c0758e1130903fa67bba78c9298356493298b14f7fbefb7bd",
+      "vsix": "bd779e9c3c35c21af07415981655c2465ae1cfdb4afa6756950c8e68e7245fdd"
     },
     "ms-vscode.js-debug-companion": {
-      "source": "7464f92ab93a31e0a004c95cb70cc62f834120cbf62ac85b7ad6eb77e060da6a",
-      "vsix": "6ac0f62754c7eb7ddcff433d627c5a7d1f15ceae9a1718f0ef20facdbaa1970c"
+      "source": "25d964149a7a71f9509877edff4d21416beaa2961a82ee0057eab19e3091ab2d",
+      "vsix": "a703765a5e83612f6539f53086a285a1b178a2839a5985ba6a2b4358fd90538b"
     },
     "ms-vscode.vscode-js-profile-table": {
-      "source": "ef89671922bac58267fdb2865802fc899919a3aaec2a61dc7129cb7390a44309",
-      "vsix": "c9f724ad4297c68bcca7c1747808749c65296eca150b0eecd2179ad87f18af99"
+      "source": "d39440fbe64208bde20c77704b2d4b56a90fbb844a4ff67c07543a17fe3b682e",
+      "vsix": "e745795425dec65ad3750e47ee3011a2ea247374a88e471c4051c68b076dbc96"
     },
     "muhammad-sammy.csharp": {
-      "source": "60df2e81dbbc0bf9f2bbe42700a21d8959f6e8c3cfde36e0afeb9bed626849c0",
-      "vsix": "42aaad5b30dc881136091d04fa027242c33c11ed076c650b9f18d5173b037085"
+      "source": "1ef0963cdc682030aa2fcf50bbb011d453a971c250c0e1b92a1be0968e131c6f",
+      "vsix": "58bca57ba385dfdda619effa96f0db915106132cef33afa83bd179b64281c722"
     },
     "redhat.ansible": {
-      "source": "749aa3442a87492b618b2e1a3b69b1e0113a0756abc6a5bf6e69f72cc4404106",
-      "vsix": "1210a6873f583b732c76c3768f147c9e4605c219535daec86b801d3c7d62a1dc"
+      "source": "6add33d283e9ae90c1cb25c115e167c4a6e56aba1400ba923e6d61dcbd83a737",
+      "vsix": "39ad5e7de21cb1f40bcf20b36cac410864755751180a73435b1754fbfa5eb917"
     },
     "redhat.fabric8-analytics": {
-      "source": "9c910f42dc2fb1329da7e2b9e73fb2a4622bbe40e708cd8021c0247f411579f8",
-      "vsix": "970a3eb8aef4559e71d5e00f2e99343559f33fd4c3181a8513e4decb302d1ce8"
+      "source": "b050d8df7280015d74969acff1e13a03ed0e13e1c4826a206be00cde91eaf4f0",
+      "vsix": "72f3f98e978e4b51ad25e9fac2fe059e60ef696b488f744defb1057b0657f3b7"
     },
     "redhat.java": {
-      "source": "fdc80a250a4a83b4a7f4f72723e31803210fd30e3df8a633f3726dad6ae3ff18",
-      "vsix": "a3321a5bad0f27f18b3008ec28f7380a753767bda951c4391e13ee2e0e399f6e"
+      "source": "da9e66256e97bdd696996d65ea38b3fb9659dde3cc0194666b974d56be6ce4f8",
+      "vsix": "0f8f87764aa6bf7257867bef6b7f7d8c2f15643d243b6941d0ee5a20e32025bc"
     },
     "redhat.vscode-commons": {
-      "source": "493e555fd88ad92b748eb3a54c5afa127056d5ebe7799b81b01dbba0ceb8a85d",
-      "vsix": "92f1859869b7022f142f9136ee8076d7645acb523b1b90593388cfae72d3ebde"
+      "source": "aa9465ebc934c87e05a7058f7bd80dd67a64d900a8b775544e149dc4d786b4e3",
+      "vsix": "1064914b897591aecc15bb7d20db98b94f494a506b7145a510281b6aed4ef7c2"
     },
     "redhat.vscode-microprofile": {
-      "source": "17691212195c5f6aae0af468e22081e9e51378fac423238289721b066ccaa395",
-      "vsix": "6c98945da07834b420dd5eb363f20db4b9cae4a930034f67b623b7fe0e1f8a20"
+      "source": "6954a4108cc031f7933b1e93023cb0d033cf64232113d5d74a5f922fb50808c1",
+      "vsix": "23503fa1de6a6b65311d45402d75be55ad0c710a1986b07df5b6698854687c42"
     },
     "redhat.vscode-openshift-connector": {
-      "source": "64e2b6881b4f6cd293454e47c4dc89deb70c9e85434856fa2943a0ccead0adc3",
-      "vsix": "4877d8b3c8d74c73dec6053fd8f9fce921d3816cab9e1bfac23999eb93d48180"
+      "source": "1d6fc958528c6230e6a14354b6830f680f3fbb821115a26048eb75b646c157c4",
+      "vsix": "d02f3700011849437cb80f9e9a09655eb89e63fbecc45a44bec416751f04364e"
     },
     "redhat.vscode-quarkus": {
-      "source": "037ef8cd7a6ba204b298c38c64d7386af02c639cef8a46a06e6d87f8991f27c7",
-      "vsix": "c893cba31d678416ac39cafd79f1755515498605101f8fa7563a4ce7dee201ce"
+      "source": "ef7c44ffbc04655b09c3885d0b3bde03349a6de120416bedec1be2c7c4990c11",
+      "vsix": "6d4a791e8ae53494e99498b746e035942323278cab399ebd0bf00187b1f78932"
     },
     "redhat.vscode-redhat-account": {
-      "source": "139cbc5c7887757c8dfdc9b8bf7456fc09249d36e50965fbf64db457d61a12b0",
-      "vsix": "ab0d75d196d66583d524184e4c7054881d6c37090d307805df2b3cd727f301ec"
+      "source": "e98e2909f54024eb62c43f3d3a1a84e0fe639776639295c8be655e2011fec3de",
+      "vsix": "9ddb17a8c3923ab0d5c3610f931a15ceeda395d62af830d6364944db0352c898"
     },
     "redhat.vscode-tekton-pipelines": {
-      "source": "c07a24ecb8be52b968f66d36ff1a6a9538f248464ca7bdb3c4ba8d14886efe7f",
-      "vsix": "efd45ac6869bc2687418c28e3503fb6f19a166f325bf797b5a68e2c7e16f2ca9"
+      "source": "1ee2cbee37a7bdc660addfbf2303cff6a743f49ffa1bb10be67096f4ca69682f",
+      "vsix": "dc9220549c74b22020785d278bb33f453a0e32e2272f6d1738af700ac5d6aa5d"
     },
     "redhat.vscode-xml": {
-      "source": "29d78ae1731ad566d854801f579d25b06d368690d751c11168f3b9facedde389",
-      "vsix": "e13c11e16accac4a886c17098caa74b7329bf977bbc8e62c26d1317acc6d9b7d"
+      "source": "b293d004f43b72b746e351bb017b95d6c4b53a37077aa0148ef068dac49060ac",
+      "vsix": "499a87a0056f9248c0248727aba4ee38f33e3034cd03e62373f36dc9749fffbe"
     },
     "redhat.vscode-yaml": {
-      "source": "8075b0882a9454fb810f0669bbd46e7753156a5e926e6c9a55e9c59d18a2ea38",
-      "vsix": "257cca7a7eae58b1a74c0c9ed0f649da22b20e41a7d2209fff645af79509e375"
+      "source": "2b009e04fb857efb892a555826998512b241dd52a7643e7662a1848389559065",
+      "vsix": "a183a69717cc36dfc64bfb7dcf8bbcbbd73da410d1c5d2e6fba48a657b47c5b9"
     },
     "sonarsource.sonarlint-vscode": {
-      "source": "53e6208b13fb0df51b52d8fc34caf0316a89e4c1efafa6333628e0fc4294c7be",
-      "vsix": "a3daf7546c805ad6e33a24e6c37473fa76295174273b6f5ac7e351418e871bbd"
+      "source": "b02ed50b0e260dca4161fc0fd585c066bb2063bcce75a0f0afd2d1e2bcbb8853",
+      "vsix": "40014a5b39e50b4a2926d3b7fd98a6e70fb75895f766346163292c7a94f265c4"
     },
     "sonatypecommunity.vscode-iq-plugin": {
-      "source": "352293bed773334ee23e4842f65a41472953001288ebf09a9b21d30e6bbd2a5e",
-      "vsix": "54f02ada4a5caebb48ec58dd2a787e4e4ee93b9a6e380a880364b0509b895772"
+      "source": "6394f049ba4584ad7c664cb29c963f718b6700a84fb7ff97fd413dfc81247b31",
+      "vsix": "a8c785eb42e87bdaac0a1ac31ee61c65256e5d5b445fb41ffe17285e3230df3e"
     },
     "timonwong.shellcheck": {
-      "source": "1acef02f63049a59433f0aa0aa40139faf7f7cff0d02f0ce16169885e8d5cf67",
-      "vsix": "8fc876ad6f2f72896349269b378ef42fd4eb9409388fe34830fe7904b9051d37"
+      "source": "920561b6de904c8aa6cfc9f40573589759b49389526ee406f7c3ed7053ea9bd3",
+      "vsix": "6f3fc6dacfb011a11281ee06e55a06cdba6a3ecc64b1c01638221eb36fdab08b"
     },
     "vscjava.vscode-java-debug": {
-      "source": "464bad6f6a299209e132fb1c662564eefbbcfba3e4728b01792af99ca44992b0",
-      "vsix": "4d3da06a83c2695c9a55799b0531d54619a160c2453f2d90a6b5fd17b371c313"
+      "source": "9896141e4dcaf343ec7e976ce9918ed7edaf4bfba1c6199f209a5ae673b8fdcb",
+      "vsix": "e0ce9a635b579621d366517df3f0aab05c01ec8d76cd5dbf85f5921a5b23be7e"
     },
     "vscjava.vscode-java-test": {
-      "source": "b06d8f4dd1822f2ae5b1c41394d4301845a9086ec1f5771735d64ccc96b20fd8",
-      "vsix": "9b109d5b2d7641ce7f32a973cbe142980b8dd34bfba5c3747d7a0e52cba1c42d"
+      "source": "8a23e44c0cc115e46a827df9ae3b57ae1699caa542e03318ffb64047efd5b7fb",
+      "vsix": "36c890365c0e758fd40074d08a27c78839efcbd0fb75eb5661cafe92b31f2f27"
     },
     "xdebug.php-debug": {
-      "vsix": "435b14c9368157f7dfacdf64f5858eb032effaa9a37cc9731b28948b5cf0ae5e",
-      "source": "a3130f45031836dc4a290f5f34937c0c0207170247fae6f3dc0e0eb75af76665"
+      "vsix": "e62125a6675f323c9ca140d1b6961150f38ad814fd832f2f39b3a16e847a3089",
+      "source": "6de25256298f6a07c03f22d190972d95cbb1302eceec3a84f5519831a2a004bb"
     },
     "ms-toolsai.vscode-jupyter-cell-tags": {
-      "vsix": "a11208dd6a8686bbcd0aff707a3ed29ecd870a3da4cd84ea5bdc9506c6568503",
-      "source": "48cfba7fbf48d4655731af9a4f0e3db1df7c682ba7cfb0e889ed3cc8fe9aabd9"
+      "vsix": "a21eab34a3ac18984a303b86596c610b5e6dcabad3748e2cb95b1590fbd0096c",
+      "source": "bcf6bc30cc4f16eb72c81e0c9e02a0035ce067a407ea811c2c7dc83c3b944f55"
     },
     "ms-toolsai.vscode-jupyter-slideshow": {
-      "vsix": "d1c65e8415506c0c356c2323170c411cbafb4b433c886c3197839612d23cd220",
-      "source": "1de93b84dc20b1f47109b4aa3ba04a9e5a281a452d382b7151e58617968744a9"
+      "vsix": "28fcd4252ffaac67e92fff777f8bf3dbae366b30fe9552426eaa3856e49835e0",
+      "source": "4c48b052bc511c4e882aa4d6934b9d4764ee18c17807e318c28042d1f81e7a1f"
     },
     "ms-python.black-formatter": {
-      "vsix": "2993d9f897c719ab938f5261fbf84793a9b8de722d5e52c374fc5c57b0fabb3d",
-      "source": "27ebe9981068e638cbbcc633cbf5683869e7b06e3388c89e6fd1248971308ff7"
+      "vsix": "baea21a8dab34a2958f08f9f4f6937a14e127793360174cbf92c2bad2dd45df9",
+      "source": "4cf7555e000d8abc0bea854878336f2fce38bee9c032f90cf2e9114b7fc381b8"
     },
     "ms-python.isort": {
-      "vsix": "6b0cc50668ffa7dcc8801ff1a5b3e521fc27de6069c820e752d70715e9d0a362",
-      "source": "dff6e8afdb2c7ff9b5ba1a01b1dbe57520320c319194ab5daafb5fa35d95f05c"
+      "vsix": "3c2f52f42f8c2c5e90f2bb742c5b5e3c1e0fe9ad8439a370e185cf4e9e023a2b",
+      "source": "34ea03f8e3174f7b4472eabdecfae73f8f80567781986dc427fb6726302b7c8c"
     }
   }
 }
