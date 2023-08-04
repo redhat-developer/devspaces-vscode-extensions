@@ -98,10 +98,10 @@
     "ms-toolsai.jupyter": {
       "comment": "Cannot be built due to https://github.com/microsoft/vscode-jupyter/issues/13260, tracked in https://issues.redhat.com/browse/CRW-4325",
       "repository": "https://github.com/microsoft/vscode-jupyter",
-      "revision": "2023.03.100",
+      "revision": "4733a075e8af70d358dba81987395c9150fe5802",
       "update": "false",
       "ubi8Image": "nodejs-16:1-90",
-      "packageManager": "npm@8.15.1"
+      "packageManager": "npm@6.14.18"
     },
     "ms-toolsai.jupyter-keymap": {
       "comment": "Version: 1.1.2",

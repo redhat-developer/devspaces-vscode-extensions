@@ -34,10 +34,10 @@ RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
     #Copy quarkus source into extension source to package both
     cp /eclipse.jdt.ls-${JDT_VERSION}-sources.tar.gz ./ && \
-    rm -rf ./.git && tar -czvf /${extension_name}-sources.tar.gz ./ && \
     npm install -g @vscode/vsce@${extension_vsce} gulp-cli@2.3.0 && \
     if [[ -f yarn.lock ]]; then yarn install; \
     else npm install --unsafe-perm=true --allow-root; fi && \
+    rm -rf ./.git && tar -czvf /${extension_name}-sources.tar.gz ./ && \
     npm run compile && \
     npm run vscode:prepublish && \
     vsce package --out /${extension_name}.vsix
