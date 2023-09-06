@@ -173,6 +173,10 @@
     "ms-python.isort": {
       "vsix": "3c2f52f42f8c2c5e90f2bb742c5b5e3c1e0fe9ad8439a370e185cf4e9e023a2b",
       "source": "34ea03f8e3174f7b4472eabdecfae73f8f80567781986dc427fb6726302b7c8c"
+    },
+    "ms-dotnettools.vscode-dotnet-runtime": {
+      "vsix": "789770ff1f4e82f84a352e7c25dba0640990fec0c342c4d60e9554a68af86054",
+      "source": "90aeb93bd4e25876bc2be000ba9e447aaeb25da9011b825c06833a3160e78f67"
     }
   }
 }

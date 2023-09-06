@@ -147,6 +147,12 @@
       "revision": "v1.0.3",
       "update": "false"
     },
+    "ms-dotnettools.vscode-dotnet-runtime": {
+      "repository": "https://github.com/dotnet/vscode-dotnet-runtime",
+      "revision": "Runtime-v1.7.2",
+      "packageManager": "yarn@1.22.10",
+      "update": "false"
+    },
     "muhammad-sammy.csharp": {
       "repository": "https://github.com/muhammadsammy/free-omnisharp-vscode",
       "revision": "1.25.7",
