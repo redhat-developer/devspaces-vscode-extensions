@@ -45,8 +45,8 @@ EXTENSION_REPOSITORY=$(parse_json repository)
 EXTENSION_REVISION=$(parse_json revision)
 
 #Defaults
-ubi8Image="nodejs-18:1-24"
-packageManager="npm@latest"
+ubi8Image="nodejs-18:1-60"
+packageManager="npm@9.6.7"
 vsceVersion="2.17.0"
 
 EXTENSION_IMAGE=$(parse_json ubi8Image)

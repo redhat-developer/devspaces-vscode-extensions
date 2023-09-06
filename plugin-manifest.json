@@ -75,12 +75,12 @@
       "vsix": "20beafb473007409871df09ffcd377decc321a5d6d414ad4da01d6bd7cfb40d4"
     },
     "ms-vscode.js-debug": {
-      "source": "dda615a2be8e5b7c0758e1130903fa67bba78c9298356493298b14f7fbefb7bd",
-      "vsix": "bd779e9c3c35c21af07415981655c2465ae1cfdb4afa6756950c8e68e7245fdd"
+      "source": "14e1676dacd8fc8b1a3bf8cb5782c91ab8d1182b1634e3b810d27bacd7978a4a",
+      "vsix": "31471656500d6c738e5921e5fbdbb7b685a8e51c2d1f9e685998807f9c2c847b"
     },
     "ms-vscode.js-debug-companion": {
-      "source": "25d964149a7a71f9509877edff4d21416beaa2961a82ee0057eab19e3091ab2d",
-      "vsix": "a703765a5e83612f6539f53086a285a1b178a2839a5985ba6a2b4358fd90538b"
+      "source": "619812b9956254c44ccc518a2d5765ff1fa2181fa847480b3c17776024ba53fb",
+      "vsix": "62062ff7a3f54ee41d24db60b09094d3dfaddee99681b94a4f7f68219b452ffb"
     },
     "ms-vscode.vscode-js-profile-table": {
       "source": "d39440fbe64208bde20c77704b2d4b56a90fbb844a4ff67c07543a17fe3b682e",
