@@ -4,7 +4,7 @@
   "Plugins": {
     "atlassian.atlascode": {
       "repository": "https://bitbucket.org/atlassianlabs/atlascode",
-      "revision": "3.0.3",
+      "revision": "3.0.5",
       "update": "true",
       "packageManager": "yarn@1.22.19"
     },
@@ -25,20 +25,20 @@
     },
     "eamodio.gitlens": {
       "repository": "https://github.com/gitkraken/vscode-gitlens",
-      "revision": "v14.0.1",
+      "revision": "v14.2.1",
       "update": "true",
       "ubi8Image": "nodejs-16:1-90",
       "packageManager": "yarn@1.22.10"
     },
     "eclipse-cdt.cdt-gdb-vscode": {
       "repository": "https://github.com/eclipse-cdt-cloud/cdt-gdb-vscode",
-      "revision": "v0.0.100",
+      "revision": "v0.0.102",
       "update": "true",
       "packageManager": "yarn@1.22.10"
     },
     "esbenp.prettier-vscode": {
       "repository": "https://github.com/prettier/prettier-vscode",
-      "revision": "v9.19.0",
+      "revision": "v10.1.0",
       "update": "true",
       "packageManager": "yarn@1.22.10"
     },
@@ -50,23 +50,23 @@
     },
     "github.vscode-pull-request-github": {
       "repository": "https://github.com/microsoft/vscode-pull-request-github",
-      "revision": "v0.68.0",
+      "revision": "v0.70.0",
       "update": "true",
       "packageManager": "yarn@1.22.10"
     },
     "gitlab.gitlab-workflow": {
       "repository": "https://gitlab.com/gitlab-org/gitlab-vscode-extension.git/",
-      "revision": "v3.68.4",
+      "revision": "v3.76.1",
       "update": "true"
     },
     "golang.go": {
       "repository": "https://github.com/golang/vscode-go",
-      "revision": "v0.39.0",
+      "revision": "v0.39.1",
       "update": "true"
     },
     "jfrog.jfrog-vscode-extension": {
       "repository": "https://github.com/jfrog/jfrog-vscode-extension",
-      "revision": "v2.3.4",
+      "revision": "v2.5.0",
       "update": "true"
     },
     "llvm-vs-code-extensions.vscode-clangd": {
@@ -92,7 +92,7 @@
     },
     "ms-python.python": {
       "repository": "https://github.com/microsoft/vscode-python",
-      "revision": "v2023.12.0",
+      "revision": "v2023.14.0",
       "update": "true"
     },
     "ms-toolsai.jupyter": {
@@ -155,7 +155,7 @@
     },
     "muhammad-sammy.csharp": {
       "repository": "https://github.com/muhammadsammy/free-omnisharp-vscode",
-      "revision": "1.25.7",
+      "revision": "2.0.436",
       "update": "true"
     },
     "redhat.ansible": {
@@ -172,7 +172,7 @@
     },
     "redhat.java": {
       "repository": "https://github.com/redhat-developer/vscode-java",
-      "revision": "v1.20.0",
+      "revision": "v1.21.0",
       "update": "true",
       "ubi8Image": "nodejs-14:1-101",
       "packageManager": "npm@6.14.17"
@@ -185,17 +185,17 @@
     },
     "redhat.vscode-microprofile": {
       "repository": "https://github.com/redhat-developer/vscode-microprofile",
-      "revision": "0.8.0",
+      "revision": "0.9.0",
       "update": "true"
     },
     "redhat.vscode-openshift-connector": {
       "repository": "https://github.com/redhat-developer/vscode-openshift-tools",
-      "revision": "v1.5.0",
+      "revision": "v1.7.0",
       "update": "true"
     },
     "redhat.vscode-quarkus": {
       "repository": "https://github.com/redhat-developer/vscode-quarkus",
-      "revision": "v1.14.0",
+      "revision": "v1.15.0",
       "update": "true",
       "ubi8Image": "nodejs-14:1-101",
       "packageManager": "npm@6.14.17"
@@ -230,27 +230,27 @@
     },
     "sonatypecommunity.vscode-iq-plugin": {
       "repository": "https://github.com/sonatype-nexus-community/vscode-iq-plugin",
-      "revision": "v1.3.3",
+      "revision": "v1.3.4",
       "update": "true"
     },
     "timonwong.shellcheck": {
       "repository": "https://github.com/vscode-shellcheck/vscode-shellcheck",
-      "revision": "v0.32.6",
+      "revision": "v0.34.0",
       "update": "true"
     },
     "vscjava.vscode-java-debug": {
       "repository": "https://github.com/microsoft/vscode-java-debug",
-      "revision": "0.52.0",
+      "revision": "0.54.0",
       "update": "true"
     },
     "vscjava.vscode-java-test": {
       "repository": "https://github.com/microsoft/vscode-java-test",
-      "revision": "0.39.0",
+      "revision": "0.39.1",
       "update": "true"
     },
     "xdebug.php-debug": {
       "repository": "https://github.com/xdebug/vscode-php-debug",
-      "revision": "v1.32.1",
+      "revision": "v1.33.0",
       "update": "true"
     }
   }

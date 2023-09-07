@@ -46,7 +46,7 @@ EXTENSION_REVISION=$(parse_json revision)
 
 #Defaults
 ubi8Image="nodejs-18:1-60"
-packageManager="npm@9.6.7"
+packageManager="npm@latest"
 vsceVersion="2.17.0"
 
 EXTENSION_IMAGE=$(parse_json ubi8Image)
@@ -91,7 +91,10 @@ BUILDER_CONTAINER_ID=$(cat "$EXTENSION_NAME"-builder-id)
 podman cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME.vsix ./
 podman cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME-sources.tar.gz ./
 podman stop $BUILDER_CONTAINER_ID
-rm ./$EXTENSION_NAME-builder-id
+
+if [[ -f ./$EXTENSION_NAME-builder-id ]]; then
+    rm ./$EXTENSION_NAME-builder-id
+fi
 
 if [[ $CLEAN -eq 1 ]]; then
     podman system prune -a -f
