@@ -3,8 +3,8 @@
   "Version": "1.0",
   "Plugins": {
     "atlassian.atlascode": {
-      "source": "72a616825ea68944ecabbd600744d1c3ab7022056e4eb9553e5022179a0f3ea3",
-      "vsix": "7bf9c0a9bf4a5ff7d24f2b58f8515ad455ecf4e976747c58ce47be8ec1715672"
+      "source": "1764545acd8f90d2ae89341234109fd9dc3da9054e327538b7ec7d5f0be7bf32",
+      "vsix": "eb6302f7fe46667556ec94f5a1ad7a22fda7b271649fd05316302339b9b128be"
     },
     "bmewburn.vscode-intelephense-client": {
       "source": "1203d092fe48d1784dd6e944b5c00e5463b4c8433f76aa58543de92700a26d35",
@@ -99,8 +99,8 @@
       "vsix": "72f3f98e978e4b51ad25e9fac2fe059e60ef696b488f744defb1057b0657f3b7"
     },
     "redhat.java": {
-      "source": "da9e66256e97bdd696996d65ea38b3fb9659dde3cc0194666b974d56be6ce4f8",
-      "vsix": "0f8f87764aa6bf7257867bef6b7f7d8c2f15643d243b6941d0ee5a20e32025bc"
+      "source": "606ba3074b4f254af5d57ccf57b919dbfa5e0ceffa2efaaadc2fb5293bd68060",
+      "vsix": "9719d574c205bb7fe6189fbfb163781c6ea3719d6b5eb6d26e74b76b0b2222c3"
     },
     "redhat.vscode-commons": {
       "source": "aa9465ebc934c87e05a7058f7bd80dd67a64d900a8b775544e149dc4d786b4e3",
