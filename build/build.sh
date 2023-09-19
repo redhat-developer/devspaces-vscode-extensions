@@ -13,6 +13,8 @@
 
 CLEAN=0
 
+set -x
+
 usage ()
 {
     echo "Usage: $0 EXTENSION_NAME [--clean]
@@ -92,9 +94,15 @@ podman cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME.vsix ./
 podman cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME-sources.tar.gz ./
 podman stop $BUILDER_CONTAINER_ID
 
+#debug information
+ls -l
 if [[ -f ./$EXTENSION_NAME-builder-id ]]; then
+    #debug information
+    echo "found file, removing builder id"
     rm ./$EXTENSION_NAME-builder-id
 fi
+#debug information
+ls -l
 
 if [[ $CLEAN -eq 1 ]]; then
     podman system prune -a -f
