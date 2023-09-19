@@ -13,6 +13,7 @@
 
 CLEAN=0
 
+#debug code
 set -x
 
 usage ()
@@ -94,14 +95,15 @@ podman cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME.vsix ./
 podman cp $BUILDER_CONTAINER_ID:/$EXTENSION_NAME-sources.tar.gz ./
 podman stop $BUILDER_CONTAINER_ID
 
-#debug information
-ls -l
-if [[ -f ./$EXTENSION_NAME-builder-id ]]; then
-    #debug information
-    echo "found file, removing builder id"
-    rm ./$EXTENSION_NAME-builder-id
-fi
-#debug information
+#debug code
+# DISABLED REMOVAL OF BUILDER_ID FILE TO SEE IF IT HELPS
+# ls -l
+# if [[ -f ./$EXTENSION_NAME-builder-id ]]; then
+#     #debug information
+#     echo "found file, removing builder id"
+#     rm ./$EXTENSION_NAME-builder-id
+# fi
+#debug code
 ls -l
 
 if [[ $CLEAN -eq 1 ]]; then
