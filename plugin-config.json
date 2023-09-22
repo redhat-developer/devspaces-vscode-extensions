@@ -133,19 +133,22 @@
       "comment": "Needed for the devspaces-code build. Version must be kept in sync with  https://github.com/microsoft/vscode/blob/main/product.json#L35",
       "repository": "https://github.com/microsoft/vscode-js-debug",
       "revision": "v1.82.0",
-      "update": "false"
+      "update": "false",
+      "packageManager": "npm@9.6.7"
     },
     "ms-vscode.js-debug-companion": {
       "comment": "Needed for the devspaces-code build. Version must be kept in sync with  https://github.com/microsoft/vscode/blob/main/product.json#L35",
       "repository": "https://github.com/microsoft/vscode-js-debug-companion",
       "revision": "v1.1.2",
-      "update": "false"
+      "update": "false",
+      "packageManager": "npm@9.6.7"
     },
     "ms-vscode.vscode-js-profile-table": {
       "comment": "Needed for the devspaces-code build. Version must be kept in sync with  https://github.com/microsoft/vscode/blob/main/product.json#L35",
       "repository": "https://github.com/microsoft/vscode-js-profile-visualizer",
       "revision": "v1.0.3",
-      "update": "false"
+      "update": "false",
+      "packageManager": "npm@9.6.7"
     },
     "ms-dotnettools.vscode-dotnet-runtime": {
       "repository": "https://github.com/dotnet/vscode-dotnet-runtime",
