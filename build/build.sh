@@ -10,27 +10,35 @@
 # Contributors:
 #   Red Hat, Inc. - initial API and implementation
 #
+set -e
 
 CLEAN=0
+UPDATE_MANIFEST=0
 
 usage ()
 {
     echo "Usage: $0 EXTENSION_NAME [--clean]
 
-Example: $0 atlassian.atlascode --clean
+Example: $0 atlassian.atlascode --clean --update-manifest
 
 Options: 
-  --clean     : Run podman system prune -a -f after the build to clean up leftover containers
+  --clean           : Clean up image and container after the build
+  --update-manifest : Update plugin-manifest.json with new SHA values after build
 "
     exit
 }
 
 if [[ -z "$1" ]]; then usage; fi
-if [[ ! -z "$2" ]] && [[ $2 = "--clean" ]]; then
-    CLEAN=1
-fi
 
 EXTENSION_NAME="$1"
+
+while [[ "$#" -gt 0 ]]; do
+	case $1 in
+		'--clean') CLEAN=1; shift 0;;
+		'--update-manifest') UPDATE_MANIFEST=1; shift 0;;
+	esac
+	shift 1
+done
 
 if [[ $(cat "plugin-config.json" | jq -r '.Plugins["'$EXTENSION_NAME'"]') -eq "null" ]]; then
     echo "Extension $EXTENSION_NAME is not in plugin-config.json"
@@ -45,7 +53,7 @@ EXTENSION_REPOSITORY=$(parse_json repository)
 EXTENSION_REVISION=$(parse_json revision)
 
 #Defaults
-ubi8Image="nodejs-18:1-60"
+ubi8Image="nodejs-18:1-71.1698060565"
 packageManager="npm@latest"
 vsceVersion="2.17.0"
 
@@ -66,7 +74,7 @@ fi
 
 echo "Building $EXTENSION_NAME, version $EXTENSION_REPOSITORY"
 if test -f "$EXTENSION_NAME/Dockerfile"; then
-    podman build --no-cache=true \
+    podman build --ulimit nofile=10000:10000 --no-cache=true \
         --build-arg extension_name="$EXTENSION_NAME" \
         --build-arg extension_repository="$EXTENSION_REPOSITORY" \
         --build-arg extension_revision="$EXTENSION_REVISION" \
@@ -75,7 +83,7 @@ if test -f "$EXTENSION_NAME/Dockerfile"; then
         --build-arg extension_vsce="$EXTENSION_VSCE" \
         -t "$EXTENSION_NAME"-builder "$EXTENSION_NAME"/
 else
-    podman build --no-cache=true \
+    podman build --ulimit nofile=10000:10000 --no-cache=true \
         --build-arg extension_name="$EXTENSION_NAME" \
         --build-arg extension_repository="$EXTENSION_REPOSITORY" \
         --build-arg extension_revision="$EXTENSION_REVISION" \
@@ -97,18 +105,20 @@ if [[ -f ./$EXTENSION_NAME-builder-id ]]; then
 fi
 
 if [[ $CLEAN -eq 1 ]]; then
-    podman system prune -a -f
+    podman rmi -f "$EXTENSION_NAME-builder"
 fi
 
-# Get SHA256 of vsix and sources files and add to plugin-manifest.json for the Brew build
-PLUGIN_SHA=$(sha256sum $EXTENSION_NAME.vsix)
-PLUGIN_SHA=${PLUGIN_SHA:0:64}
+if [[ $UPDATE_MANIFEST -eq 1 ]]; then
+    # Get SHA256 of vsix and sources files and add to plugin-manifest.json for the Brew build
+    PLUGIN_SHA=$(sha256sum $EXTENSION_NAME.vsix)
+    PLUGIN_SHA=${PLUGIN_SHA:0:64}
 
-FILE=$(cat "plugin-manifest.json" | jq -r ".Plugins[\"$EXTENSION_NAME\"][\"vsix\"] |= \"$PLUGIN_SHA\"")
-echo "${FILE}" > "plugin-manifest.json"
+    FILE=$(cat "plugin-manifest.json" | jq -r ".Plugins[\"$EXTENSION_NAME\"][\"vsix\"] |= \"$PLUGIN_SHA\"")
+    echo "${FILE}" > "plugin-manifest.json"
 
-SOURCE_SHA=$(sha256sum $EXTENSION_NAME-sources.tar.gz)
-SOURCE_SHA=${SOURCE_SHA:0:64}
+    SOURCE_SHA=$(sha256sum $EXTENSION_NAME-sources.tar.gz)
+    SOURCE_SHA=${SOURCE_SHA:0:64}
 
-FILE=$(cat "plugin-manifest.json" | jq -r ".Plugins[\"$EXTENSION_NAME\"][\"source\"] |= \"$SOURCE_SHA\"")
-echo "${FILE}" > "plugin-manifest.json"
+    FILE=$(cat "plugin-manifest.json" | jq -r ".Plugins[\"$EXTENSION_NAME\"][\"source\"] |= \"$SOURCE_SHA\"")
+    echo "${FILE}" > "plugin-manifest.json"
+fi

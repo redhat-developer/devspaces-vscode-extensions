@@ -1,19 +1,29 @@
+Links marked with this icon 🚪 are internal to Red Hat
+
 This repository builds and publishes VS Code extensions used in both Eclipse Che and in Red Hat OpenShift Dev Spaces (formerly Red Hat CodeReady Workspaces).
 
-Every extension in this repository builds inside a `ubi8` based Dockerfile. The resulting `.vsix` files and sources tarballs are then copied out of the container and published as GitHub release assets. Every PR merged in this repository will trigger a GitHub release, where the extensions built from that PR will be the release assets in the corresponding GitHub release.
+Every extension in this repository builds inside a `ubi8` based Dockerfile. The resulting `.vsix` files and sources tarballs are then copied out of the container and published as GitHub release assets. Additionally, for DevSpaces a special [Jenkins Job](https://main-jenkins-csb-crwqe.apps.ocp-c1.prod.psi.redhat.com/job/DS_CI/job/pluginregistry-plugins_3.x) is used to publish devspaces  Every PR merged in this repository will trigger a GitHub release, where the extensions built from that PR will be the release assets in the corresponding GitHub release.
 
 # Contributing
 ## Repository Structure
-Every folder in this repository belongs to a VS Code extension. For example, the `Dockerfile` that builds the `vscode-python` extension would live in the `/vscode-python` folder. Please note that the name of the folder **must** match the repository name for the VS Code extension. For example, the folder name for the extension hosted at `https://github.com/microsoft/vscode-eslint` must be named `vscode-eslint`.
+`plugin-config.json` contains information about all VS Code extensions.
+`plugin-manifests.json` contains information about SHA sums for all built plugins, that are published to [RCM tools](https://download.devel.redhat.com/rcm-guest/staging/devspaces/build-requirements/) 🚪. 
 
-Every extension folder **must** have an `extension.json` file at its root. The schema of this JSON file is as follows:
+Every extension  **must** have an entry in `plugin-config.json` file. An example entry of a plugin in JSON is as follows:
 
 ```js
-{
+
+atlassian.atlascode{
   // Repository URL of the extension's git repository
   "repository": "https://github.com/microsoft/vscode-python",
   // The tag/SHA1-ID of the extension's repository which you would like to build
-  "revision": "2020.11.358366026"
+  "revision": "2020.11.358366026",
+  // (Optional) Override for UBI8 image name and version
+  "ubi8Image": "nodejs-18:1-71",
+  // (Optional) Override for name and version of package manager
+  "packageManager": "npm@9.6.7",
+  // (Optional) Override for version of vsce
+  "vsceVersion": "2.17.0"
 }
 ```
 
@@ -24,6 +34,8 @@ Should you choose to contribute a `Dockerfile`, the following things are require
 * The `Dockerfile` must take the following build-time arguments (i.e. `ARG name`):
     * `extension_repository`
     * `extension_revision`
-    * `extension_name`
+    * `extension_image`
+    * `extension_manager`
+    * `extension_vsce`
 * The `vsix` file resulting from the build (inside the container) must be located at the root of the container, named `/name-revision.vsix` (where name and revision are the values of the build arg specified above)
 * A tarball of the extension's source code (prior to build) must be located at the root of the container, named `/name-revision-sources.tar.gz` (again, where name and revision are the values of the build arg specified above)

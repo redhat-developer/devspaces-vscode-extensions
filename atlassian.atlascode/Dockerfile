@@ -20,7 +20,7 @@ ARG extension_vsce
 USER root
 WORKDIR /
 
-RUN npm install -g npm@9.6.7 ${extension_manager} 
+RUN npm install -g ${extension_manager} 
 
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
