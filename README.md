@@ -12,19 +12,25 @@ Every extension in this repository builds inside a `ubi8` based Dockerfile. The 
 Every extension  **must** have an entry in `plugin-config.json` file. An example entry of a plugin in JSON is as follows:
 
 ```js
-
-atlassian.atlascode{
-  // Repository URL of the extension's git repository
-  "repository": "https://github.com/microsoft/vscode-python",
-  // The tag/SHA1-ID of the extension's repository which you would like to build
-  "revision": "2020.11.358366026",
-  // (Optional) Override for UBI8 image name and version
-  "ubi8Image": "nodejs-18:1-71",
-  // (Optional) Override for name and version of package manager
-  "packageManager": "npm@9.6.7",
-  // (Optional) Override for version of vsce
-  "vsceVersion": "2.17.0"
-}
+{
+...
+  "Plugins": {
+...
+    atlassian.atlascode: {
+      // Repository URL of the extension's git repository
+      "repository": "https://github.com/microsoft/vscode-python",
+      // The tag/SHA1-ID of the extension's repository which you would like to build
+      "revision": "2020.11.358366026",
+      // If true, plugin will be updateable during the /build/update-from-ovsx.sh script run
+      "update": true,
+      // (Optional) Override for UBI8 image name and version
+      "ubi8Image": "nodejs-18:1-71",
+      // (Optional) Override for name and version of package manager
+      "packageManager": "npm@9.6.7",
+      // (Optional) Override for version of vsce
+      "vsceVersion": "2.17.0"
+    },
+...
 ```
 
 Optionally, a `Dockerfile` that builds the extension can be provided inside the extension's folder. Note, this is only needed if the extension requires "special" dependencies to build. If no `Dockerfile` is found in the extensions's folder, then the "generic" `Dockerfile` (found at the root of this repository) will be used. In this case, the only thing needed is the folder matching the extension's name, and the `extension.json` file as outlined above.
