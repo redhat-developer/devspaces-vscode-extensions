@@ -45,8 +45,7 @@
     "felixfbecker.php-debug": {
       "repository": "https://github.com/xdebug/vscode-php-debug",
       "revision": "v1.32.1",
-      "update": "true",
-      "ubi8Image": "nodejs-16:1-90"
+      "update": "true"
     },
     "github.vscode-pull-request-github": {
       "repository": "https://github.com/microsoft/vscode-pull-request-github",
@@ -66,7 +65,7 @@
     },
     "jfrog.jfrog-vscode-extension": {
       "repository": "https://github.com/jfrog/jfrog-vscode-extension",
-      "revision": "v2.7.1",
+      "revision": "2.7.1",
       "update": "true"
     },
     "llvm-vs-code-extensions.vscode-clangd": {
@@ -81,7 +80,7 @@
     },
     "ms-python.isort": {
       "repository": "https://github.com/microsoft/vscode-isort",
-      "revision": "2023.10.1",
+      "revision": "v2023.10.1",
       "update": "true"
     },
     "ms-python.black-formatter": {
@@ -100,8 +99,7 @@
       "repository": "https://github.com/microsoft/vscode-jupyter",
       "revision": "4733a075e8af70d358dba81987395c9150fe5802",
       "update": "false",
-      "ubi8Image": "nodejs-16:1-90",
-      "packageManager": "npm@6.14.18"
+      "packageManager": "npm@9.5.0"
     },
     "ms-toolsai.jupyter-keymap": {
       "comment": "Version: 1.1.2",
@@ -132,23 +130,20 @@
     "ms-vscode.js-debug": {
       "comment": "Needed for the devspaces-code build. Version must be kept in sync with  https://github.com/microsoft/vscode/blob/main/product.json#L35",
       "repository": "https://github.com/microsoft/vscode-js-debug",
-      "revision": "v1.82.0",
-      "update": "false",
-      "packageManager": "npm@9.6.7"
+      "revision": "v1.83.1",
+      "update": "false"
     },
     "ms-vscode.js-debug-companion": {
       "comment": "Needed for the devspaces-code build. Version must be kept in sync with  https://github.com/microsoft/vscode/blob/main/product.json#L35",
       "repository": "https://github.com/microsoft/vscode-js-debug-companion",
       "revision": "v1.1.2",
-      "update": "false",
-      "packageManager": "npm@9.6.7"
+      "update": "false"
     },
     "ms-vscode.vscode-js-profile-table": {
       "comment": "Needed for the devspaces-code build. Version must be kept in sync with  https://github.com/microsoft/vscode/blob/main/product.json#L35",
       "repository": "https://github.com/microsoft/vscode-js-profile-visualizer",
       "revision": "v1.0.3",
-      "update": "false",
-      "packageManager": "npm@9.6.7"
+      "update": "false"
     },
     "ms-dotnettools.vscode-dotnet-runtime": {
       "repository": "https://github.com/dotnet/vscode-dotnet-runtime",
@@ -169,7 +164,7 @@
     },
     "redhat.fabric8-analytics": {
       "repository": "https://github.com/fabric8-analytics/fabric8-analytics-vscode-extension",
-      "revision": "0.7.0",
+      "revision": "v0.7.0",
       "update": "true",
       "packageManager": "npm@6.14.17"
     },
@@ -193,7 +188,7 @@
     },
     "redhat.vscode-openshift-connector": {
       "repository": "https://github.com/redhat-developer/vscode-openshift-tools",
-      "revision": "v1.8.0",
+      "revision": "1.8.0",
       "update": "true"
     },
     "redhat.vscode-quarkus": {

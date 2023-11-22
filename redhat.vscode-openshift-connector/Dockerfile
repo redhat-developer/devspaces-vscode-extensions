@@ -22,9 +22,14 @@ WORKDIR ${HOME}
 
 RUN npm install -g ${extension_manager}
 
-RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
-    git clone ${extension_repository} ${extension_name} && \
-    cd ./${extension_name} && git checkout ${extension_revision} && \
+# build bug - if project path contain dots, it will cause one of dependencies to fail build:
+# https://github.com/redhat-developer/vscode-openshift-tools/issues/3527
+# since `extension_name` contains one, a `workaround_path` variable will be used
+# once the bug is fixed, workaround path can be replaced back with extension_name
+ENV workaround_path="vscode-openshift-connector"
+RUN mkdir ./${workaround_path}-src && cd ./${workaround_path}-src && \
+    git clone ${extension_repository} ${workaround_path} && \
+    cd ./${workaround_path} && git checkout ${extension_revision} && \
     rm -rf ./.git && tar -czvf ${HOME}/${extension_name}-sources.tar.gz ./ && \
     npm install -g @vscode/vsce@${extension_vsce} gulp-cli@2.3.0 && \
     if [[ -f yarn.lock ]]; then yarn install; \
