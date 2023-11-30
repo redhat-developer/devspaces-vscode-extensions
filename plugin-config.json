@@ -142,7 +142,7 @@
     "ms-vscode.vscode-js-profile-table": {
       "comment": "Needed for the devspaces-code build. Version must be kept in sync with  https://github.com/microsoft/vscode/blob/main/product.json#L35",
       "repository": "https://github.com/microsoft/vscode-js-profile-visualizer",
-      "revision": "v1.0.8",
+      "revision": "v1.0.7",
       "update": "false"
     },
     "ms-dotnettools.vscode-dotnet-runtime": {
