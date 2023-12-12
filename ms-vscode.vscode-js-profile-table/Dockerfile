@@ -31,4 +31,6 @@ RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     rm -rf ./.git && tar -czvf /${extension_name}-sources.tar.gz ./ && \
     npm run compile && \
     cd ./packages/vscode-js-profile-table && cp ../../LICENSE ./ && \
+    #next line is needed for 1.0.8 version, which wrongfully contains 1.0.7 version in its sources
+    npm --no-git-tag-version version --allow-same-version ${extension_revision#v} && \
     vsce package --out /${extension_name}.vsix --no-dependencies
