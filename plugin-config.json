@@ -55,22 +55,22 @@
     },
     "gitlab.gitlab-workflow": {
       "repository": "https://gitlab.com/gitlab-org/gitlab-vscode-extension.git/",
-      "revision": "v3.93.1",
+      "revision": "v3.96.1",
       "update": "true"
     },
     "golang.go": {
       "repository": "https://github.com/golang/vscode-go",
-      "revision": "v0.40.0",
+      "revision": "v0.40.1",
       "update": "true"
     },
     "jfrog.jfrog-vscode-extension": {
       "repository": "https://github.com/jfrog/jfrog-vscode-extension",
-      "revision": "2.9.3",
+      "revision": "2.9.5",
       "update": "true"
     },
     "llvm-vs-code-extensions.vscode-clangd": {
       "repository": "https://github.com/clangd/vscode-clangd",
-      "revision": "0.1.25",
+      "revision": "0.1.26",
       "update": "true"
     },
     "ms-kubernetes-tools.vscode-kubernetes-tools": {
@@ -164,7 +164,7 @@
     },
     "redhat.fabric8-analytics": {
       "repository": "https://github.com/fabric8-analytics/fabric8-analytics-vscode-extension",
-      "revision": "v0.7.3",
+      "revision": "v0.9.0",
       "update": "true",
       "packageManager": "npm@6.14.17"
     },
