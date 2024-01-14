@@ -59,8 +59,8 @@
       "vsix": "44ce22bc5a705371052a2ed719599c2cc40598f6c30893634afa0f8f56ad5b9e"
     },
     "ms-python.python": {
-      "source": "a15989385dcc171531e58bd9b42d83a2f92a2d21af6a274440b41499abaddd98",
-      "vsix": "f1bec63e3ed72c406e30c6632323e45382d8d45532b10f602614ac5d239555fb"
+      "source": "05dc38a0fc3273b879082efb75a668d7724f9f95a1d3252d2aa90c5f22f8d3fc",
+      "vsix": "84d48f382167609649766416248f37bfde64aadc942aa5c80b3a6537b2cf374e"
     },
     "ms-toolsai.jupyter": {
       "source": "9ad6bbbb3fa0f8124429e7b60ff333f5005222c631ab8d88e6cce87f0aa9596c",
@@ -87,8 +87,8 @@
       "vsix": "6fd13ac8135c4bbe13197ac3dcfa86dbad0a476414e97c32ab84c176f50884aa"
     },
     "muhammad-sammy.csharp": {
-      "source": "8c2e996b3bb687f5d67a2d0eed6f67c2a1c25eedb0f3184a76d35612179423a7",
-      "vsix": "1386147e4d08635e01e3073aa832633f1a03db0c828124396f414d6bbdf580dd"
+      "source": "4cc150c26b314ca3301210b09f2976d156273bbfb055f97bef2ec75d3cec8c49",
+      "vsix": "1ea52027787ddc4f59463f5725cf95c75b119858018761fd13a6f2176ed281a6"
     },
     "redhat.ansible": {
       "source": "53a9dd3cadb6b37cd88ba076f10d205f13cd122e38a7929db07e73448b969cef",

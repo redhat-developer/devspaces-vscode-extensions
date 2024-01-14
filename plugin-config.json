@@ -55,7 +55,7 @@
     },
     "gitlab.gitlab-workflow": {
       "repository": "https://gitlab.com/gitlab-org/gitlab-vscode-extension.git/",
-      "revision": "v3.97.0",
+      "revision": "v3.98.0",
       "update": "true"
     },
     "golang.go": {
@@ -91,7 +91,7 @@
     },
     "ms-python.python": {
       "repository": "https://github.com/microsoft/vscode-python",
-      "revision": "v2023.20.0",
+      "revision": "v2023.22.1",
       "update": "true"
     },
     "ms-toolsai.jupyter": {
@@ -153,7 +153,7 @@
     },
     "muhammad-sammy.csharp": {
       "repository": "https://github.com/muhammadsammy/free-omnisharp-vscode",
-      "revision": "2.14.9",
+      "revision": "2.15.30",
       "update": "true"
     },
     "redhat.ansible": {
@@ -170,7 +170,7 @@
     },
     "redhat.java": {
       "repository": "https://github.com/redhat-developer/vscode-java",
-      "revision": "v1.25.1",
+      "revision": "v1.26.0",
       "update": "true",
       "ubi8Image": "nodejs-14:1-101",
       "packageManager": "npm@6.14.17"
