@@ -15,7 +15,7 @@
     },
     "dbaeumer.vscode-eslint": {
       "repository": "https://github.com/microsoft/vscode-eslint",
-      "revision": "release/2.4.2",
+      "revision": "release/2.4.4",
       "update": "true"
     },
     "donjayamanne.githistory": {
@@ -60,7 +60,7 @@
     },
     "golang.go": {
       "repository": "https://github.com/golang/vscode-go",
-      "revision": "v0.40.1",
+      "revision": "v0.40.3",
       "update": "true"
     },
     "jfrog.jfrog-vscode-extension": {
