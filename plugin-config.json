@@ -49,13 +49,13 @@
     },
     "github.vscode-pull-request-github": {
       "repository": "https://github.com/microsoft/vscode-pull-request-github",
-      "revision": "v0.78.1",
+      "revision": "v0.80.0",
       "update": "true",
       "packageManager": "yarn@1.22.10"
     },
     "gitlab.gitlab-workflow": {
       "repository": "https://gitlab.com/gitlab-org/gitlab-vscode-extension.git/",
-      "revision": "v3.100.0",
+      "revision": "v3.101.1",
       "update": "true"
     },
     "golang.go": {
@@ -65,7 +65,7 @@
     },
     "jfrog.jfrog-vscode-extension": {
       "repository": "https://github.com/jfrog/jfrog-vscode-extension",
-      "revision": "2.9.5",
+      "revision": "2.9.6",
       "update": "true"
     },
     "llvm-vs-code-extensions.vscode-clangd": {
@@ -84,14 +84,14 @@
       "update": "true"
     },
     "ms-python.black-formatter": {
-      "comment": "Version: 2023.6.0",
+      "comment": "Version: 2024.0.0",
       "repository": "https://github.com/microsoft/vscode-black-formatter",
-      "revision": "87c64698e9dfab5fa1c2e5fc5a3fc4f1fad3b6ce",
+      "revision": "12df4056a0efbf9e320e944c970bcf285d897be3",
       "update": "true"
     },
     "ms-python.python": {
       "repository": "https://github.com/microsoft/vscode-python",
-      "revision": "v2023.22.1",
+      "revision": "v2024.0.0",
       "update": "true"
     },
     "ms-toolsai.jupyter": {
@@ -170,7 +170,7 @@
     },
     "redhat.java": {
       "repository": "https://github.com/redhat-developer/vscode-java",
-      "revision": "v1.26.0",
+      "revision": "v1.27.0",
       "update": "true",
       "ubi8Image": "nodejs-14:1-101",
       "packageManager": "npm@6.14.17"
@@ -183,7 +183,7 @@
     },
     "redhat.vscode-microprofile": {
       "repository": "https://github.com/redhat-developer/vscode-microprofile",
-      "revision": "0.10.0",
+      "revision": "0.11.0",
       "update": "true"
     },
     "redhat.vscode-openshift-connector": {
@@ -238,7 +238,7 @@
     },
     "vscjava.vscode-java-debug": {
       "repository": "https://github.com/microsoft/vscode-java-debug",
-      "revision": "0.55.0",
+      "revision": "0.56.0",
       "update": "true"
     },
     "vscjava.vscode-java-test": {

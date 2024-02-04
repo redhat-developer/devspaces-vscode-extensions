@@ -59,8 +59,8 @@
       "vsix": "44ce22bc5a705371052a2ed719599c2cc40598f6c30893634afa0f8f56ad5b9e"
     },
     "ms-python.python": {
-      "source": "05dc38a0fc3273b879082efb75a668d7724f9f95a1d3252d2aa90c5f22f8d3fc",
-      "vsix": "84d48f382167609649766416248f37bfde64aadc942aa5c80b3a6537b2cf374e"
+      "source": "870bc994d71e08cbb361dc2cbaacc5441c70799ce4cbb4a0027f95cd2e8f752f",
+      "vsix": "0bc8b491538d857fa94b3b71cda8a817944ff7f4ae7f371f464148c23ac3cb0d"
     },
     "ms-toolsai.jupyter": {
       "source": "9ad6bbbb3fa0f8124429e7b60ff333f5005222c631ab8d88e6cce87f0aa9596c",
@@ -107,8 +107,8 @@
       "vsix": "14c389bcb7a5a0c229b585dc9e357dfe51f2f4e793418f537434bb081c360fb0"
     },
     "redhat.vscode-microprofile": {
-      "source": "1ee5bb6dbb2bf4f8275c61f8d0f987808600556667f289cbf6be6a4e2e05142a",
-      "vsix": "0b319577049b689c1eac8ff5e449e4870df02965c001a9630161f38223894d86"
+      "source": "64400416b5092a39f3bb3330b63779fad3d915c8a3854492aedfd3505a4bc751",
+      "vsix": "7bd6667400ef99387d0a6b83916f7f9b6fb7a0a63740cdce5e79a8508c9d916c"
     },
     "redhat.vscode-openshift-connector": {
       "source": "c63554966af0ee3f0bd2cba39b3bb4018db7ba80ac2f380a80cc86309b534f70",
@@ -147,8 +147,8 @@
       "vsix": "c013e6c5da686114a18998d503eb1b91941d12dc238739ec61b39d6f4d056b46"
     },
     "vscjava.vscode-java-debug": {
-      "source": "3dc0f7a14de33d6c08e2fbddf42fcf4d94be3a94424f11f25285273237dff02a",
-      "vsix": "6c25192a431baaa10e57afc9fd900ba431dcbb606fe6ed1d6803d302a6c6c592"
+      "source": "6d7069fc6dd544660792ae9243c09567a106b2b283840985230396081e0044b9",
+      "vsix": "d343150b07d73aeb3f40fa74169b7d3d0424cbe40d9ef334434afa0973c2e5f4"
     },
     "vscjava.vscode-java-test": {
       "source": "4d6e668db658972c18bd0ccc2566775958419c02c2152e99bc76bb509c7b8b7e",
@@ -167,8 +167,8 @@
       "source": "92e4fa692515e368620dd51fff20a55798d513debb14a283964b5811b8bac812"
     },
     "ms-python.black-formatter": {
-      "vsix": "d18ac572eecc23acad1d56ac29e78cb61a2eadea4223eb1516636437d4cc2631",
-      "source": "7e5ddd9a2e6aa2e2982847e9c4efa817c938967e90ee221ba36f33bc9f2f4c87"
+      "vsix": "4eff09fedd32f24fbd31dcbcb6222ee632b3c03c0aea69b3921404592c3048f0",
+      "source": "d1d855979dc28d312f1fc3e009da8b5bc8da926dc8a12229febe313b105e2997"
     },
     "ms-python.isort": {
       "vsix": "d5cf2e2539628bcf3faf294f22f67d40480fc6709a9167472e3851d35076333b",
