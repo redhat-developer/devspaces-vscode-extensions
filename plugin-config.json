@@ -23,6 +23,11 @@
       "revision": "v0.6.20",
       "update": "true"
     },
+    "devfile.vscode-devfile": {
+      "repository": "https://github.com/devfile/vscode-walkthrough-extension",
+      "revision": "0.0.2",
+      "update": false
+    }
     "eamodio.gitlens": {
       "repository": "https://github.com/gitkraken/vscode-gitlens",
       "revision": "v14.7.0",
