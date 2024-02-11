@@ -19,8 +19,8 @@
       "vsix": "d9863d63da2080c21280ba6e6ae741a966caa1ff94a019e50be5349fc996c736"
     },
     "eamodio.gitlens": {
-      "source": "508e933e09d6e96c7365bf6c5a1cbd5bbab8463c05047c7cbc6d9ec69e62a645",
-      "vsix": "a4c2e0660a29fbee6bcf1c864424338a38187159c5213a2131767f6289c4bd8b"
+      "source": "7e213495413b21836375de23b1ee120f5a29b9747248c603bbe60a3c75d1defd",
+      "vsix": "eb3965dbb60a06e368cd189e791b49ac6b7d5357a4118d21a64673e101f35c2e"
     },
     "eclipse-cdt.cdt-gdb-vscode": {
       "source": "810adf904bad3a089b3f828e020a60e7988fd1ce008dfa9a7727820ea8f3f765",
@@ -59,8 +59,8 @@
       "vsix": "44ce22bc5a705371052a2ed719599c2cc40598f6c30893634afa0f8f56ad5b9e"
     },
     "ms-python.python": {
-      "source": "870bc994d71e08cbb361dc2cbaacc5441c70799ce4cbb4a0027f95cd2e8f752f",
-      "vsix": "0bc8b491538d857fa94b3b71cda8a817944ff7f4ae7f371f464148c23ac3cb0d"
+      "source": "efbfffb34cf9e776a8d16e866759c81c1e5b0d0bf258493cfe9147020fb8e9c2",
+      "vsix": "2177002df3229453edfb59e8a8100f264a4ecc923f4a1482a2208a9f9d9a5e05"
     },
     "ms-toolsai.jupyter": {
       "source": "9ad6bbbb3fa0f8124429e7b60ff333f5005222c631ab8d88e6cce87f0aa9596c",
