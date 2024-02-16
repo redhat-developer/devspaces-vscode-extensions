@@ -177,6 +177,10 @@
     "ms-dotnettools.vscode-dotnet-runtime": {
       "vsix": "f65a8b0e6ba28bee8b9b1f508c472f1f9112d160c62e814f577393f5d95783d7",
       "source": "7f30dfc6b8cb0ba00ac84a360c8fa2a61a50db2451b31cf789ac814530f818bb"
+    },
+    "devfile.vscode-devfile": {
+      "vsix": "11fe95dd2e80e10eb53c8ea227293f88b26b16ef1edb295aec569961655e653f",
+      "source": "55c139682d6ea98d9afe4576cc1510a032a3b20b2add0f63712724114d397e40"
     }
   }
 }
