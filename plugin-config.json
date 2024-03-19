@@ -135,7 +135,7 @@
     "ms-vscode.js-debug": {
       "comment": "Needed for the devspaces-code build. Version must be kept in sync with  https://github.com/microsoft/vscode/blob/main/product.json#L35",
       "repository": "https://github.com/microsoft/vscode-js-debug",
-      "revision": "v1.86.1",
+      "revision": "v1.87.0",
       "update": "false"
     },
     "ms-vscode.js-debug-companion": {
