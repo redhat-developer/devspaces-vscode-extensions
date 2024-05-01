@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (c) 2023 Red Hat, Inc.
+# Copyright (c) 2024 Red Hat, Inc.
 # This program and the accompanying materials are made
 # available under the terms of the Eclipse Public License 2.0
 # which is available at https://www.eclipse.org/legal/epl-2.0/
@@ -25,7 +25,6 @@ usage()
 Requires:
   - plugin-config.json (redhat-developer/devspaces-vscode-extensions)
   - openvsx-sync.json (redhat-developer/devspaces/dependencies/che-plugin-registry) 
-  - download_vsix.sh (redhat-developer/devspaces/dependencies/che-plugin-registry)
 
 They will be downloaded if not found."
     exit
@@ -41,18 +40,18 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 if [[ ! "${MIDSTM_BRANCH}" ]]; then 
-    MIDSTM_BRANCHh="$(git rev-parse --abbrev-ref HEAD 2>/dev/null || true)"
+    MIDSTM_BRANCH="$(git rev-parse --abbrev-ref HEAD 2>/dev/null || true)"
     if [[ $MIDSTM_BRANCH != "devspaces-3."*"-rhel-8" ]]; then
         MIDSTM_BRANCH="devspaces-3-rhel-8"
     fi
 fi
 
-# Check for openvsx-sync.json, plugin-config.json and download-vsix.sh
+# cleanup any previous runs
+rm -rf /tmp/vsix-sources/
+
+# Check for openvsx-sync.json, plugin-config.json
 if [[ ! -f openvsx-sync.json ]]; then
   curl -sSLO https://raw.githubusercontent.com/redhat-developer/devspaces/$MIDSTM_BRANCH/dependencies/che-plugin-registry/openvsx-sync.json
-fi
-if [[ ! -f download_vsix.sh ]]; then
-  curl -sSLO https://raw.githubusercontent.com/redhat-developer/devspaces/$MIDSTM_BRANCH/dependencies/che-plugin-registry/build/scripts/download_vsix.sh
 fi
 if [[ ! -f plugin-config.json ]]; then
   curl -sSLO https://raw.githubusercontent.com/redhat-developer/devspaces-vscode-extensions/$MIDSTM_BRANCH/plugin-config.json
@@ -67,11 +66,7 @@ replaceField()
   echo "${changed}" > "plugin-config.json"
 }
 
-# Update openvsx-sync.json
-chmod +x -R *.sh
-./download_vsix.sh -b $MIDSTM_BRANCH -j ./openvsx-sync.json --no-download 
-
-# Read in openvsx-sync.sh to get list of pluginregistry plugins
+# Read in openvsx-sync.json to get list of pluginregistry plugins
 pluginsOVSX=$(cat openvsx-sync.json | jq -r '.[].id')
 pluginsConfig=$(cat plugin-config.json | jq -r '.Plugins | keys[]')
 
