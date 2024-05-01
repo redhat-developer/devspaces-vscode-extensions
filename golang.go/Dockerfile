@@ -20,7 +20,7 @@ ARG extension_vsce
 USER root
 WORKDIR /
 
-RUN npm install -g ${extension_manager} 
+RUN npm install -g ${extension_manager}
 
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
@@ -29,5 +29,4 @@ RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     if [[ -f yarn.lock ]]; then yarn install; \
     else npm install --unsafe-perm=true --allow-root; fi && \
     rm -rf ./.git && tar -czvf /${extension_name}-sources.tar.gz ./ && \
-    # Adding --no-dependencies for now since there is an npm list issue during packaging 
     vsce package --out /${extension_name}.vsix
