@@ -1,6 +1,6 @@
 #!/bin/bash -e
 #
-# Copyright (c) 2023 Red Hat, Inc.
+# Copyright (c) 2024 Red Hat, Inc.
 # This program and the accompanying materials are made
 # available under the terms of the Eclipse Public License 2.0
 # which is available at https://www.eclipse.org/legal/epl-2.0/
@@ -53,9 +53,9 @@ EXTENSION_REPOSITORY=$(parse_json repository)
 EXTENSION_REVISION=$(parse_json revision)
 
 #Defaults
-ubi8Image="nodejs-18:1-71.1698060565"
+ubi8Image="nodejs-18:1-102"
 packageManager="npm@latest"
-vsceVersion="2.17.0"
+vsceVersion="2.26.0"
 
 EXTENSION_IMAGE=$(parse_json ubi8Image)
 if [[ $EXTENSION_IMAGE -eq "null" ]]; then

@@ -17,26 +17,18 @@ ARG extension_name
 ARG extension_manager
 ARG extension_vsce
 
-USER 1001
-WORKDIR ${HOME}
-
 RUN npm install -g ${extension_manager}
 
-# build bug - if project path contain dots, it will cause one of dependencies to fail build:
-# https://github.com/redhat-developer/vscode-openshift-tools/issues/3527
-# since `extension_name` contains one, a `workaround_path` variable will be used
-# once the bug is fixed, workaround path can be replaced back with extension_name
-ENV workaround_path="vscode-openshift-connector"
-RUN mkdir ./${workaround_path}-src && cd ./${workaround_path}-src && \
-    git clone ${extension_repository} ${workaround_path} && \
-    cd ./${workaround_path} && git checkout ${extension_revision} && \
-    rm -rf ./.git && tar -czvf ${HOME}/${extension_name}-sources.tar.gz ./ && \
-    npm install -g @vscode/vsce@${extension_vsce} gulp-cli@2.3.0 && \
+RUN mkdir /tmp/${extension_name}-src && cd /tmp/${extension_name}-src && \
+    git clone ${extension_repository} ${extension_name} && \
+    cd ${extension_name} && git checkout ${extension_revision} && \
+    rm -rf ./.git && tar -czvf /tmp/${extension_name}-sources.tar.gz ./ && \
+    npm install -g @vscode/vsce@${extension_vsce} && \
     if [[ -f yarn.lock ]]; then yarn install; \
     else npm install --unsafe-perm=true --allow-root; fi && \
-    vsce package --out ${HOME}/${extension_name}.vsix
+    vsce package --out /tmp/${extension_name}.vsix
 
 USER root
 
-RUN mv ${HOME}/${extension_name}-sources.tar.gz / && \
-    mv ${HOME}/${extension_name}.vsix / 
+RUN mv /tmp/${extension_name}-sources.tar.gz / && \
+    mv /tmp/${extension_name}.vsix /

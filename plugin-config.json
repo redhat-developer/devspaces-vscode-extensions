@@ -4,13 +4,13 @@
   "Plugins": {
     "atlassian.atlascode": {
       "repository": "https://bitbucket.org/atlassianlabs/atlascode",
-      "revision": "3.0.9",
+      "revision": "3.0.10",
       "update": "true",
       "packageManager": "yarn@1.22.19"
     },
     "bmewburn.vscode-intelephense-client": {
       "repository": "https://github.com/bmewburn/vscode-intelephense",
-      "revision": "v1.10.2",
+      "revision": "v1.10.4",
       "update": "true"
     },
     "dbaeumer.vscode-eslint": {
@@ -30,7 +30,7 @@
     },
     "eamodio.gitlens": {
       "repository": "https://github.com/gitkraken/vscode-gitlens",
-      "revision": "v14.8.0",
+      "revision": "v14.9.1",
       "update": "true",
       "ubi8Image": "nodejs-16:1-90",
       "packageManager": "yarn@1.22.10"
@@ -43,44 +43,39 @@
     },
     "esbenp.prettier-vscode": {
       "repository": "https://github.com/prettier/prettier-vscode",
-      "revision": "v10.1.0",
+      "revision": "v10.4.0",
       "update": "true",
       "packageManager": "yarn@1.22.10"
     },
-    "felixfbecker.php-debug": {
-      "repository": "https://github.com/xdebug/vscode-php-debug",
-      "revision": "v1.32.1",
-      "update": "true"
-    },
     "github.vscode-pull-request-github": {
       "repository": "https://github.com/microsoft/vscode-pull-request-github",
-      "revision": "v0.80.0",
+      "revision": "v0.86.1",
       "update": "true",
       "packageManager": "yarn@1.22.10"
     },
     "gitlab.gitlab-workflow": {
       "repository": "https://gitlab.com/gitlab-org/gitlab-vscode-extension.git/",
-      "revision": "v4.0.0",
+      "revision": "v4.9.0",
       "update": "true"
     },
     "golang.go": {
       "repository": "https://github.com/golang/vscode-go",
-      "revision": "v0.40.3",
+      "revision": "v0.41.4",
       "update": "true"
     },
     "jfrog.jfrog-vscode-extension": {
       "repository": "https://github.com/jfrog/jfrog-vscode-extension",
-      "revision": "2.9.6",
+      "revision": "2.10.1",
       "update": "true"
     },
     "llvm-vs-code-extensions.vscode-clangd": {
       "repository": "https://github.com/clangd/vscode-clangd",
-      "revision": "0.1.26",
+      "revision": "0.1.28",
       "update": "true"
     },
     "ms-kubernetes-tools.vscode-kubernetes-tools": {
       "repository": "https://github.com/vscode-kubernetes-tools/vscode-kubernetes-tools",
-      "revision": "1.3.15",
+      "revision": "1.3.16",
       "update": "true"
     },
     "ms-python.isort": {
@@ -89,22 +84,21 @@
       "update": "true"
     },
     "ms-python.black-formatter": {
-      "comment": "Version: 2024.0.0",
+      "comment": "Version: 2024.2.0",
       "repository": "https://github.com/microsoft/vscode-black-formatter",
-      "revision": "12df4056a0efbf9e320e944c970bcf285d897be3",
+      "revision": "652cef95031be8a512f01e8c13e924ad7a67ba03",
       "update": "true"
     },
     "ms-python.python": {
       "repository": "https://github.com/microsoft/vscode-python",
-      "revision": "v2024.0.1",
+      "revision": "v2024.4.1",
       "update": "true"
     },
     "ms-toolsai.jupyter": {
-      "comment": "Cannot be built due to https://github.com/microsoft/vscode-jupyter/issues/13260, tracked in https://issues.redhat.com/browse/CRW-4325",
+      "comment": "Version: 2024.3.1",
       "repository": "https://github.com/microsoft/vscode-jupyter",
-      "revision": "4733a075e8af70d358dba81987395c9150fe5802",
-      "update": "false",
-      "packageManager": "npm@9.5.0"
+      "revision": "29b78d8fc33983431f0a01248cd545abcda0d7e4",
+      "update": "true"
     },
     "ms-toolsai.jupyter-keymap": {
       "comment": "Version: 1.1.2",
@@ -121,15 +115,15 @@
       "packageManager": "npm@8.15.1"
     },
     "ms-toolsai.vscode-jupyter-cell-tags": {
-      "comment": "Version: 0.1.8",
+      "comment": "Version: 0.1.9",
       "repository": "https://github.com/Microsoft/vscode-jupyter-cell-tags",
-      "revision": "5d4f72e96414442cf3afd91d8adb8fa6807fd778",
+      "revision": "bbc509cd58549ff592943dce340d6d3f84a51e86",
       "update": "true"
     },
     "ms-toolsai.vscode-jupyter-slideshow": {
-      "comment": "Version: 0.1.5",
+      "comment": "Version: 0.1.6",
       "repository": "https://github.com/Microsoft/vscode-jupyter-slideshow",
-      "revision": "2cf41f6d1f8c8045a6810ce922378ce731aac806",
+      "revision": "dd2de712e89ca65f2fbe912f71c1133b52e3f252",
       "update": "true"
     },
     "ms-vscode.js-debug": {
@@ -151,20 +145,22 @@
       "update": "false"
     },
     "ms-dotnettools.vscode-dotnet-runtime": {
+      "comment": "Version: 2.0.3",
       "repository": "https://github.com/dotnet/vscode-dotnet-runtime",
-      "revision": "Runtime-v1.7.2",
+      "revision": "606893d9dde25814ed5e6b0bf3fd9d763281e53d",
       "packageManager": "yarn@1.22.10",
-      "update": "false"
+      "update": "true"
     },
     "muhammad-sammy.csharp": {
       "repository": "https://github.com/muhammadsammy/free-omnisharp-vscode",
-      "revision": "2.15.30",
+      "revision": "2.23.15",
       "update": "true"
     },
     "redhat.ansible": {
+      "comment": "Version: 24.4.0",
       "repository": "https://github.com/ansible/vscode-ansible",
-      "revision": "v2.4",
-      "update": "false",
+      "revision": "bd6caef0acc2dc4f5ed0a1a3ab7fec5acd80183d",
+      "update": "true",
       "packageManager": "yarn@1.22.10"
     },
     "redhat.fabric8-analytics": {
@@ -193,20 +189,19 @@
     },
     "redhat.vscode-openshift-connector": {
       "repository": "https://github.com/redhat-developer/vscode-openshift-tools",
-      "revision": "1.11.0",
+      "revision": "1.13.0",
       "update": "true"
     },
     "redhat.vscode-quarkus": {
+      "comment": "Version: 1.17.0",
       "repository": "https://github.com/redhat-developer/vscode-quarkus",
-      "revision": "v1.17.0",
-      "update": "true",
-      "ubi8Image": "nodejs-14:1-101",
-      "packageManager": "npm@6.14.17"
+      "revision": "c225c2f85d8f680a8de335bb294013d27f1e7b51",
+      "update": "true"
     },
     "redhat.vscode-redhat-account": {
-      "comment": "Version: 0.1.0",
+      "comment": "Version: 0.2.0",
       "repository": "https://github.com/redhat-developer/vscode-redhat-account",
-      "revision": "b1e57fae4120291427bfea9685c4b069a2235405",
+      "revision": "35fa63a507d66dc0c263777b2a020067fabee041",
       "update": "true"
     },
     "redhat.vscode-tekton-pipelines": {
@@ -238,17 +233,17 @@
     },
     "timonwong.shellcheck": {
       "repository": "https://github.com/vscode-shellcheck/vscode-shellcheck",
-      "revision": "v0.35.0",
+      "revision": "v0.37.1",
       "update": "true"
     },
     "vscjava.vscode-java-debug": {
       "repository": "https://github.com/microsoft/vscode-java-debug",
-      "revision": "0.56.0",
+      "revision": "0.57.0",
       "update": "true"
     },
     "vscjava.vscode-java-test": {
       "repository": "https://github.com/microsoft/vscode-java-test",
-      "revision": "0.40.1",
+      "revision": "0.41.1",
       "update": "true"
     },
     "xdebug.php-debug": {
