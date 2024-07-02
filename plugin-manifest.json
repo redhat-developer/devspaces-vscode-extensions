@@ -19,8 +19,8 @@
       "vsix": "d9863d63da2080c21280ba6e6ae741a966caa1ff94a019e50be5349fc996c736"
     },
     "eamodio.gitlens": {
-      "source": "7e213495413b21836375de23b1ee120f5a29b9747248c603bbe60a3c75d1defd",
-      "vsix": "eb3965dbb60a06e368cd189e791b49ac6b7d5357a4118d21a64673e101f35c2e"
+      "source": "9f7b50946b1dc6db18b5ce7cc242b3087f2590ebd91cc2d609106a40815674f0",
+      "vsix": "609eecfe1115bac581d50abbcc62ad8f3d3bfdaa023f4125fdd0b55422dd7657"
     },
     "eclipse-cdt.cdt-gdb-vscode": {
       "source": "810adf904bad3a089b3f828e020a60e7988fd1ce008dfa9a7727820ea8f3f765",
@@ -63,8 +63,8 @@
       "vsix": "2177002df3229453edfb59e8a8100f264a4ecc923f4a1482a2208a9f9d9a5e05"
     },
     "ms-toolsai.jupyter": {
-      "source": "9ad6bbbb3fa0f8124429e7b60ff333f5005222c631ab8d88e6cce87f0aa9596c",
-      "vsix": "0a65ed38b8c3945804fc21314a6a4aaa1d9f2906e31e9993d082f8da7091081e"
+      "source": "9d8005e57c0ff86562044acb1026618c920a81a979375b36a77dbc0d2aac92b7",
+      "vsix": "e8ad9f19e148ab1dd3d3c2e0ab03ca6a49ff0e12431f31cb30d7ff339e21cdb4"
     },
     "ms-toolsai.jupyter-keymap": {
       "source": "b200722401d9e4d3a0528578b055a2b17e7e836b064f432e0cec0f335836eea1",
@@ -87,8 +87,8 @@
       "vsix": "4b3ceb96af9d0d02f17f09da2e7871e7568e27ba65c20f6cf71e16ad6b98a832"
     },
     "muhammad-sammy.csharp": {
-      "source": "4cc150c26b314ca3301210b09f2976d156273bbfb055f97bef2ec75d3cec8c49",
-      "vsix": "1ea52027787ddc4f59463f5725cf95c75b119858018761fd13a6f2176ed281a6"
+      "source": "b671f39bd2f54431dd7d3be8f2344ea76faeec6bfc247159f3cf5dd01c9ac677",
+      "vsix": "a469fe65a6d07e832d0c58766ecba52d4a48836b97c82ef3e765bd77cd75daac"
     },
     "redhat.ansible": {
       "source": "53a9dd3cadb6b37cd88ba076f10d205f13cd122e38a7929db07e73448b969cef",
@@ -111,8 +111,8 @@
       "vsix": "7bd6667400ef99387d0a6b83916f7f9b6fb7a0a63740cdce5e79a8508c9d916c"
     },
     "redhat.vscode-openshift-connector": {
-      "source": "c63554966af0ee3f0bd2cba39b3bb4018db7ba80ac2f380a80cc86309b534f70",
-      "vsix": "bc273b594a78897221d428cb0157b48e20224bad66e3b1f7e5e8daf58e0720a6"
+      "source": "49cbefbcf9d9d251cb513a59c9ad0314077e09642806f1f08b756e114ad32df9",
+      "vsix": "bac00ee39c9b90f0397054b567b4591cec88cc42e97f2671b1e7a9c5db20dd22"
     },
     "redhat.vscode-quarkus": {
       "source": "b0c9c2746576a518647351fb648be92ed7d2a0ec6a7c81fe19002e73b1bd9b11",
@@ -127,8 +127,8 @@
       "vsix": "0cab7a81807b5443cfeb101a1f393cb66665cc5722aafc936a045f94bb4d0d63"
     },
     "redhat.vscode-xml": {
-      "source": "d0f6906a52c7b1b249317180ca8875d4991f8da6eeac1eb0c22f8240fcb398d4",
-      "vsix": "72c084df2c7943b0d3ce2071cd533331f812ccc550841fa4f757f04bb1dc4546"
+      "source": "f59965074abb8d581a0cb6d29a0fb231e9f4f07783ab412994de19d8bd5a286c",
+      "vsix": "14f787a2ba195bfae07b3bc8dea3689214aa8ac2938027bc10ca0803c09ee999"
     },
     "redhat.vscode-yaml": {
       "source": "ad5cab48d35a59085476cf07005799ff7855421b99058cc162130802cdd4f2b7",
@@ -175,8 +175,8 @@
       "source": "d72585ba008adc865089c0ac271cc8395cc49cfaaffb69b41c885432ce005d7e"
     },
     "ms-dotnettools.vscode-dotnet-runtime": {
-      "vsix": "f65a8b0e6ba28bee8b9b1f508c472f1f9112d160c62e814f577393f5d95783d7",
-      "source": "7f30dfc6b8cb0ba00ac84a360c8fa2a61a50db2451b31cf789ac814530f818bb"
+      "vsix": "d166c1ba4a40817c94323092537df54a5127990e0ae2d5f306ef1469b2b203fe",
+      "source": "fd1e8c916d72f67092e8de9b839764799512c2bd62c55c6450be4dc407e86f5b"
     },
     "devfile.vscode-devfile": {
       "vsix": "16f89c8e9d4de5cbe77eb42b85aada4b8dce0267570f82b76e08ed8691cb0c09",
