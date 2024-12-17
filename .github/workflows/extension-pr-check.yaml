@@ -19,7 +19,7 @@ jobs:
 
     steps:
     - name: Clone source code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
         ref: ${{ github.event.pull_request.head.sha }}
@@ -30,7 +30,7 @@ jobs:
 
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         path: |
           *.vsix
