@@ -9,7 +9,7 @@
 
 ARG extension_image
 
-FROM registry.access.redhat.com/ubi8/${extension_image}
+FROM registry.access.redhat.com/ubi9/nodejs-20:9.5
 
 ARG extension_repository
 ARG extension_revision
