@@ -1,5 +1,5 @@
 {
-  "Purpose": "To track the source revision and build requirements of Visual Studio Plugins used by PluginRegistry",
+  "Purpose": "To track the source revision and build requirements of Visual Studio Extensions used by PluginRegistry",
   "Version": "1.0",
   "Plugins": {
     "atlassian.atlascode": {
