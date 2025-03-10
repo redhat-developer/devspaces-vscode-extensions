@@ -34,7 +34,7 @@ jobs:
     
     - name: Push tag
       id: tag_version
-      uses: mathieudutour/github-tag-action@v5
+      uses: mathieudutour/github-tag-action@1bab3ab0712cafa42b54c512453487b89bb06504 #v5
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         custom_tag: ${{ steps.release-info.outputs.release-tag }}
@@ -44,7 +44,7 @@ jobs:
         ./.ci/extension_build_publish.sh build-publish HEAD^1 HEAD
 
     - name: Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 #v1
       with:
         files: |
           ./*.vsix
