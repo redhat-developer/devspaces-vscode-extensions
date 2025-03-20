@@ -53,7 +53,7 @@ EXTENSION_REPOSITORY=$(parse_json repository)
 EXTENSION_REVISION=$(parse_json revision)
 
 #Defaults
-ubi8Image="nodejs-18:1-102"
+ubi8Image="nodejs-20:1-73"
 packageManager="npm@latest"
 vsceVersion="2.26.0"
 
