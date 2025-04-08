@@ -25,6 +25,13 @@ RUN npm install -g ${extension_manager}
 RUN mkdir ./${extension_name}-src && cd ./${extension_name}-src && \
     git clone ${extension_repository} ${extension_name} && \
     cd ./${extension_name} && git checkout ${extension_revision} && \
+    # workaround for the https://github.com/microsoft/vscode-js-debug/issues/2195
+    # should be removed when version in upstream is updated 
+    current_version=$(node -p "require('./package.json').version") && \
+    if [ "$extension_revision" = "v1.97.1" ] && [ "$current_version" = "1.97.0" ]; then \
+        npm version 1.97.1 --no-git-tag-version; \
+        echo "Version was updated to 1.97.1"; \
+    fi; \
     npm install -g @vscode/vsce@${extension_vsce} gulp-cli@2.3.0 && \
     if [[ -f yarn.lock ]]; then yarn install; \
     else npm install --unsafe-perm=true --allow-root; fi && \
